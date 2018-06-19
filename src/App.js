@@ -5,7 +5,7 @@ import Header from './header/Header';
 import Container from './ui/Container';
 
 const Body = styled.div `
-min-width: 900px;
+min-width: 1200px;
 background-color: #e6ecf0;
 margin: auto;
 margin: 0;

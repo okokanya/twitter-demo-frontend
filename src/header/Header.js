@@ -6,21 +6,51 @@ import {
   Moments,
   Notifications,
   Messages,
-  TwitterIcon,
-  Avatar
+  TwitterIcon
 } from '../ui/Icon.js';
+import Avatar from '../ui/Avatar';
+import Button from '../ui/Button';
+import SearchInput from '../ui/SearchInput';
 
-//Это блок, внутри которого будет три — левое меню, знак твиттера, и правый с инпутом итд.
 const HeaderNav = styled.div `
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px;
+  background: white;
+  position: relative;
 `;
 
-//этот наверное просто дивом можно сделать, надо посмотреть. ему не нужен стиль даже =/
-const HeaderNavBlock = sytled.div ``;
+const HeaderNavBlock = styled.div `
+  display: flex;
+  div {
+    margin: 0 10px;
+  }
+`;
 
-//Менюшка в которой инконка и надпись
 const HeaderNavItem = styled.div `
+  display: flex;
+  color: #66757F;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  word-spacing: 5px;
+  cursor: pointer;
+  svg {
+    margin-right: 5px;
+  }
+`;
+
+const TwitterLogo = styled.div `
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
 `;
 
 const Header = () => (
@@ -29,20 +59,37 @@ const Header = () => (
       <HeaderNavBlock>
         <HeaderNavItem><Home />Home</HeaderNavItem>
         <HeaderNavItem><Moments />Moments</HeaderNavItem>
+        <HeaderNavItem><Notifications />Notifications</HeaderNavItem>
+        <HeaderNavItem><Messages />Messages</HeaderNavItem>
       </HeaderNavBlock>
       <HeaderNavBlock>
-        Лого твиттера
+        <SearchInput />
+        <Avatar small />
+        <Button blue>Tweet</Button>
       </HeaderNavBlock>
-      <HeaderNavBlock>
-        {/*<SearchInput />
-        <Avatar />
-        <Button>Tweet</Button>*/}
-      </HeaderNavBlock>
+      <TwitterLogo>
+        <TwitterIcon />
+      </TwitterLogo>
     </HeaderNav>
   </Container>
 );
 
 export default Header;
+
+// import React, {Component} from 'react';
+// import styled from 'styled-components';
+// import Button from '../ui/Button.js';
+// import '../App.css';
+// import avatar from '../img/avatar.png';
+// import headerImg from '../img/headerImg.png';
+// import {
+//   Home,
+//   Moments,
+//   Notifications,
+//   Messages,
+//   TwitterIcon,
+//   Avatar
+// } from '../ui/Icon.js';
 
 // const HeaderImg = styled.div `
 // height: 380px;
