@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Tweet from './Tweet';
-import Avatar from '../ui/Avatar';
+import avatar from '../img/avatar.png';
 
 const FeedContainer = styled.section `
   height: auto;
@@ -15,8 +15,8 @@ class Feed extends Component {
   render() {
     return (
       <FeedContainer>
-        <Tweet avatar>
-          <Avatar small /> message children 
+        <Tweet avatar={avatar} username="EveryInteract" name="Every Interaction" time="23h">
+          Here will be some message (tweet)
         </Tweet>
       </FeedContainer>
     );
