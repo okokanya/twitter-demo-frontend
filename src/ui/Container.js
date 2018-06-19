@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const Container = styled.div `
-width: 1200px;
-background-color: greenyellow;
-margin: 0 auto;
+  width: ${props => props.small ? 590 : 1200}px;
+  margin: 0 auto;
+  position: relative;
 `;
 
 export default Container;

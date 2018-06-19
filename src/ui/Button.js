@@ -1,4 +1,3 @@
-import React, {Component} from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button `
@@ -6,11 +5,12 @@ const Button = styled.button `
   border-radius: 20px;
   background-color: ${props => props.blue ? '#1da1f2' : 'white'};
   color: ${props => props.blue ? "white" : "#1da1f2"};
-  border-color: ${props => props.blue ? "#1da1f2" : "#e6ecf0"};
+  border-color: #1da1f2;
+  border-width: 2px;
   cursor: pointer;
   margin-right: 16px;
   font-size: 14px;
-  line-height: 36px;
+  line-height: 34px;
   height: 36px;
 `;
 

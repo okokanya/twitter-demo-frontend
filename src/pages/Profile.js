@@ -1,59 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import Feed from '../feed/Feed';
 import Container from '../ui/Container';
 import Avatar from '../ui/Avatar';
 import Button from '../ui/Button';
+import Stat from '../ui/Stat';
+import { More } from '../ui/Icon';
+
 import headerImg from '../img/headerImg.png';
-
-// const HeaderNav = styled.div `
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   height: 50px;
-//   padding: 0 20px;
-//   background: white;
-//   position: relative;
-// `;
-
-// const HeaderNavBlock = styled.div `
-//   display: flex;
-//   align-items: center;
-//   div {
-//     margin: 0 10px;
-//   }
-// `;
-
-// const HeaderNavItem = styled.div `
-//   display: flex;
-//   color: #66757F;
-//   font-size: 13px;
-//   font-weight: 500;
-//   line-height: 20px;
-//   word-spacing: 5px;
-//   cursor: pointer;
-//   svg {
-//     margin-right: 5px;
-//   }
-//   :hover {
-//     opacity: .5;
-//   }
-// `;
-
-// const TwitterLogo = styled.div `
-//   position: absolute;
-//   width: 20px;
-//   height: 20px;
-//   left: 0;
-//   right: 0;
-//   margin: auto;
-//   top: 0;
-//   bottom: 0;
-// `;
 
 const Statistic = styled.div `
   height: 60px;
+  border-bottom: 2px solid #c5cdd2b0;
   background: white;
-  box-shadow: 0 4px 2px #B2BAC0;    
 `;
 
 const Content = styled.div `
@@ -68,17 +28,50 @@ const HeaderImg = styled.div `
   background-position-y: -230px;
   background-repeat: no-repeat;
 `;
+
+const RightBlock = styled.div `
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;  
+`;
+
+const StatBlock = styled.div `
+  display: flex;
+
+  > div {
+    margin-right: 20px;
+  }
+`;
+
 const Profile = () => (
   <div>
-  <HeaderImg />
+    <HeaderImg />
     <Statistic>
       <Container>
-        Статистика
+        <Container small>
+          <StatBlock>
+            <Stat number="8,058" title="Tweets" active />
+            <Stat number="721" title="Following" />
+            <Stat number="1,815" title="Followers" />
+            <Stat number="460" title="Likes" />
+            <Stat number="2" title="Lists" />
+          </StatBlock>
+        </Container>
+        <RightBlock>
+          <Button>Follow</Button>
+          <More />
+        </RightBlock>
       </Container>
     </Statistic>
     <Content>
       <Container>
-        Контент
+        <Container small>
+          <Feed />
+        </Container>
       </Container>
     </Content>
   </div>
