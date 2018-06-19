@@ -24,6 +24,7 @@ const HeaderNav = styled.div `
 
 const HeaderNavBlock = styled.div `
   display: flex;
+  align-items: center;
   div {
     margin: 0 10px;
   }
@@ -33,12 +34,15 @@ const HeaderNavItem = styled.div `
   display: flex;
   color: #66757F;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 20px;
   word-spacing: 5px;
   cursor: pointer;
   svg {
     margin-right: 5px;
+  }
+  :hover {
+    opacity: .5;
   }
 `;
 
@@ -63,7 +67,7 @@ const Header = () => (
         <HeaderNavItem><Messages />Messages</HeaderNavItem>
       </HeaderNavBlock>
       <HeaderNavBlock>
-        <SearchInput />
+        <SearchInput placeholder="Search Twitter" />
         <Avatar small />
         <Button blue>Tweet</Button>
       </HeaderNavBlock>
@@ -75,68 +79,3 @@ const Header = () => (
 );
 
 export default Header;
-
-// import React, {Component} from 'react';
-// import styled from 'styled-components';
-// import Button from '../ui/Button.js';
-// import '../App.css';
-// import avatar from '../img/avatar.png';
-// import headerImg from '../img/headerImg.png';
-// import {
-//   Home,
-//   Moments,
-//   Notifications,
-//   Messages,
-//   TwitterIcon,
-//   Avatar
-// } from '../ui/Icon.js';
-
-// const HeaderImg = styled.div `
-// height: 380px;
-// width: 100%;
-// background-image: url(${headerImg});
-// background-size: cover;
-// background-position-y: -170px;
-// background-repeat: no-repeat;
-// `;
-
-// const Input = styled.input `
-// border-radius: 5px;
-// border: 1px solid #e6ecf0;
-// font-size: 10px;
-// padding: 5px;
-// background-color: #ffffff;
-// placeholder: "Search Twitter 🔍 ";
-// `
-
-// const HeaderNav = styled.nav `
-// display: flex;
-// flex-wrap: nowrap;
-// height: 45px;
-// width: 800px;
-// margin: auto;
-// justify-content: space-around;
-// align-items: center;
-// `;
-
-// class Header extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <HeaderNav>
-//           <a><Home />Home</a>
-//           <a><Moments />Moments</a>
-//           <a><Notifications />Notifications</a>
-//           <a><Messages />Messages</a>
-//           <a><TwitterIcon /></a>
-//           <Input placeholder="Search Twitter 🔍 " />
-//           <Avatar />
-//           <Button blue>Tweet</Button>
-//         </HeaderNav>
-//         <HeaderImg />
-//       </div>
-//     );
-//   }
-// }
-
-// export default Header;

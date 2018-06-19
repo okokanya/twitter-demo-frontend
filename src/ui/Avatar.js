@@ -1,4 +1,3 @@
-import React, {Component} from 'react';
 import styled from 'styled-components';
 import avatar from '../img/avatar.png';
 
@@ -10,8 +9,8 @@ background-size: contain;
 background-repeat: none;
 /* border: solid white 4px; */
 border-radius: 50%;
-height: ${props => props.big ? '200px' : props.middle ? '80px' : '40px' };
-width: ${props => props.big ? '200px' : props.middle ? '80px' : '40px' };
+height: ${props => props.big ? '200px' : props.middle ? '80px' : '30px' };
+width: ${props => props.big ? '200px' : props.middle ? '80px' : '30px' };
 cursor: pointer;
 `;
 
