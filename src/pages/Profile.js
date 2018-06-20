@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Feed from '../feed/Feed';
+import ProfileDescription from '../ProfileDescription';
 import Container from '../ui/Container';
-import Avatar from '../ui/Avatar';
 import Button from '../ui/Button';
 import Stat from '../ui/Stat';
 import { More } from '../ui/Icon';
@@ -18,7 +18,7 @@ const Statistic = styled.div `
 
 const Content = styled.div `
   background: #E6ECF0;
-  height: 200px;
+  padding-top: 8px;
 `;
 const HeaderImg = styled.div `
   height: 380px;
@@ -41,7 +41,6 @@ const RightBlock = styled.div `
 
 const StatBlock = styled.div `
   display: flex;
-
   > div {
     margin-right: 20px;
   }
@@ -69,6 +68,7 @@ const Profile = () => (
     </Statistic>
     <Content>
       <Container>
+        <ProfileDescription />
         <Container small>
           <Feed />
         </Container>

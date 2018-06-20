@@ -1,5 +1,4 @@
 import React from 'react';
-// import avatar from '../img/avatar.png';
 
 const Home = () => (
   <svg
@@ -144,20 +143,42 @@ const Magnifier = () => (
     />
   </svg>
 );
+const Joined = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.5 3C0.5 1.61929 1.61929 0.5 3 0.5H13C14.3807 0.5 15.5 1.61929 15.5 3V13C15.5 14.3807 14.3807 15.5 13 15.5H3C1.61929 15.5 0.5 14.3807 0.5 13V3Z" stroke="#657786"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 0.895431 0.895431 0 2 0H14C15.1046 0 16 0.895431 16 2V3H0V2Z" fill="#657786"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0Z" transform="translate(3 5)" fill="#657786"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0Z" transform="translate(7 5)" fill="#657786"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0Z" transform="translate(11 5)" fill="#657786"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0Z" transform="translate(11 8)" fill="#657786"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0Z" transform="translate(7 8)" fill="#657786"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0Z" transform="translate(3 8)" fill="#657786"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0Z" transform="translate(3 11)" fill="#657786"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0Z" transform="translate(7 11)" fill="#657786"/>
+  </svg>
+);
 
-// const Avatar = () => <img src={avatar} height="35px" style={{
-//   borderRadius: "17px"
-// }}/>;
-// const BigAvatar = () => <img
-//   src={avatar}
-//   height="180px"
-//   style={{
-//   borderRadius: "90px",
-//   boxShadow: "0 0 10px rgba(0,0,0,0.2)",
-//   padding: "5px",
-//   margin: "5px",
-//   backgroundColor: "white"
-// }}/>;
+const Link = () => (
+  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.82398 8.78302C2.15146 8.67336 1.50591 8.35991 0.987389 7.84267C-0.32913 6.5294 -0.32913 4.40043 0.987389 3.08767L3.27872 0.984569C4.59524 -0.32819 6.72894 -0.32819 8.04494 0.984569C9.36146 2.29784 9.36146 4.42629 8.04494 5.73905L6.73154 7.08802" transform="translate(5.53712 1.00012)" stroke="#657888" stroke-linecap="round"/>
+    <path d="M6.43507 0C7.17396 0.0786207 7.89159 0.400345 8.4573 0.965172C9.77381 2.27845 9.77381 4.40741 8.4573 5.72017L5.75374 8.41707C4.43722 9.73035 2.30352 9.73035 0.987 8.41707C-0.329 7.10431 -0.329 4.97586 0.987 3.66259L2.43885 2.21483" transform="translate(0.999897 6.41394)" stroke="#657888" stroke-linecap="round"/>
+  </svg>
+);
+
+const Location = () => (
+  <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 14C7.04167 14 13 9.31371 13 6C13 2.68629 10.0899 0 6.5 0C2.91015 0 0 2.68629 0 6C0 9.31371 5.95833 14 6.5 14Z" transform="translate(1 1)" stroke="#657786"/>
+    <path d="M4.5 2.5C4.5 3.60457 3.60457 4.5 2.5 4.5C1.39543 4.5 0.5 3.60457 0.5 2.5C0.5 1.39543 1.39543 0.5 2.5 0.5C3.60457 0.5 4.5 1.39543 4.5 2.5Z" transform="translate(5 4)" stroke="#657786"/>
+  </svg>
+);
+
+const Photo = () => (
+  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0.5 2C0.5 1.17157 1.17157 0.5 2 0.5H13C13.8284 0.5 14.5 1.17157 14.5 2V13C14.5 13.8284 13.8284 14.5 13 14.5H2C1.17157 14.5 0.5 13.8284 0.5 13V2Z" stroke="#687A88"/>
+    <path d="M50.1909 49.9052L53.4838 46.6123C53.8743 46.2217 54.5075 46.2217 54.898 46.6123L60.1909 51.9052" transform="translate(-49.1909 -37.9052)" stroke="#687A88"/>
+    <path d="M1706.09 -1040.11L1709.27 -1043.3C1709.7 -1043.73 1710.41 -1043.68 1710.78 -1043.19L1713.09 -1040.11" transform="translate(-1699.09 1050.11)" stroke="#687A88"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 1C0.776142 1 1 0.776142 1 0.5C1 0.223858 0.776142 0 0.5 0C0.223858 0 0 0.223858 0 0.5C0 0.776142 0.223858 1 0.5 1Z" transform="translate(5 4)" stroke="#687A88"/>
+  </svg>);
 
 export {
   Home,
@@ -166,5 +187,9 @@ export {
   Messages,
   TwitterIcon,
   More,
-  Magnifier
+  Magnifier,
+  Joined,
+  Link,
+  Photo,
+  Location
 };
