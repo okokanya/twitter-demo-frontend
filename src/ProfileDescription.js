@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Avatar from './ui/Avatar';
 import Button from './ui/Button';
 
-import Messages from './ui/Icon';
+import { Location, Link, Joined } from './ui/Icon';
 
 const DescContainer = styled.div `
   position: absolute;
@@ -35,12 +35,29 @@ const DescSubheader = styled.div `
 
 const Desc = styled.div `
   font-size: 14px;
+  margin-bottom: 20px;
 `;
 
 const DescIcons = styled.div `
-  li {
-  list-style-type: none;
+  ul {
+    margin: 0;
+    padding: 0;
   }
+
+  li {
+    list-style-type: none;
+    line-height: 16px;
+    color: #697786;
+    font-size: 14px;
+    margin: 10px 0;
+
+    svg {
+      margin-right: 10px;
+      vertical-ali
+    }
+  }
+  
+  margin-bottom: 20px;
 `;
 
 const DescButtons = styled.div `
@@ -59,9 +76,9 @@ const ProfileDescription = () => (
     <Desc>Some info here</Desc>
     <DescIcons>
       <ul>
-        <li><Messages />London</li>
-        <li>Иконка два</li>
-        <li>Иконка три</li>
+        <li><Location />London</li>
+        <li><Link /><a href="#">everyiteraction.com</a></li>
+        <li><Joined />Joined May 2008</li>
       </ul>
     </DescIcons>
     <DescButtons>
