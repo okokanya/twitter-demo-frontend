@@ -24,6 +24,10 @@ const FeedTab = styled.div `
   color: ${props => props.active ? 'black' : '#1da1f2'};
   margin-right: 20px;
   cursor: pointer;
+
+  :hover {
+    color: black;
+  }
 `;
 
 class Feed extends Component {
@@ -40,6 +44,7 @@ class Feed extends Component {
           username="EveryInteract"
           name="Every Interaction"
           time="23h"
+          stat={[0, 2, 3, 4]}
         >
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
           doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
@@ -52,6 +57,7 @@ class Feed extends Component {
           username="EveryInteract"
           name="Every Interaction"
           time="23h"
+          stat={[0, 2, 3, 4]}
         >
           Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
           laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
@@ -63,6 +69,7 @@ class Feed extends Component {
           username="EveryInteract"
           name="Every Interaction"
           time="23h"
+          stat={[1, 2, 1, 0]}
         >
           Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
           molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
@@ -73,6 +80,7 @@ class Feed extends Component {
           username="EveryInteract"
           name="Every Interaction"
           time="23h"
+          stat={[2, 3, 4, 5]}
         >
           аNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
           quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque

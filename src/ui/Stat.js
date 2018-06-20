@@ -10,6 +10,11 @@ const StatContainer = styled.div `
   color: #66757F;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+
+  :hover {
+    border-bottom-color: #1da1f2;
+  }
 `;
 
 const StatTitle = styled.div `

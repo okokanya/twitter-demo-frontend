@@ -48,7 +48,7 @@ const TweetIcon = styled.span `
   line-height: 16px;
   margin-left: 4px;
   color: #667580;
-  font-weight: 600;
+  font-weight:600
 
   svg {
     margin-right: 5px;
@@ -56,17 +56,17 @@ const TweetIcon = styled.span `
   }
 `;
 
-const Tweet = ({ children, username, time, name, avatar }) => (
+const Tweet = ({ children, username, time, name, avatar, stat = [] }) => (
   <TweetContainer>
     <TweetAvatar><img width={50} src={avatar} alt={username} /></TweetAvatar>
     <TweetBody>
       <TweetHeader><em>{name}</em> @{username} {time}</TweetHeader>
       {children}
       <TweetIcons>
-        <TweetIcon><Comment />2</TweetIcon>
-        <TweetIcon><Retweet />2</TweetIcon>
-        <TweetIcon><Likes />2</TweetIcon>
-        <TweetIcon><Envelope />2</TweetIcon>
+        <TweetIcon><Comment />{stat[0] || ''}</TweetIcon>
+        <TweetIcon><Retweet />{stat[1] || ''}</TweetIcon>
+        <TweetIcon><Likes />{stat[2] || ''}</TweetIcon>
+        <TweetIcon><Envelope />{stat[3] || ''}</TweetIcon>
       </TweetIcons>
     </TweetBody>
   </TweetContainer>
