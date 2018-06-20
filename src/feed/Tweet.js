@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {  Comment, Retweet, Likes, Envelope } from '../ui/Icon';
 
 const TweetContainer = styled.div `
   border-bottom: 1px solid #e6ecf0;
@@ -36,8 +37,23 @@ const TweetHeader = styled.div `
 
 const TweetIcons = styled.div `
   height: 40px;
+  width: 50%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+`;
+
+const TweetIcon = styled.span `
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 4px;
+  color: #667580;
+  font-weight: 600;
+
+  svg {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
 `;
 
 const Tweet = ({ children, username, time, name, avatar }) => (
@@ -46,7 +62,12 @@ const Tweet = ({ children, username, time, name, avatar }) => (
     <TweetBody>
       <TweetHeader><em>{name}</em> @{username} {time}</TweetHeader>
       {children}
-      <TweetIcons>Иконки тут</TweetIcons>
+      <TweetIcons>
+        <TweetIcon><Comment />2</TweetIcon>
+        <TweetIcon><Retweet />2</TweetIcon>
+        <TweetIcon><Likes />2</TweetIcon>
+        <TweetIcon><Envelope />2</TweetIcon>
+      </TweetIcons>
     </TweetBody>
   </TweetContainer>
 );

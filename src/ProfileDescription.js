@@ -49,15 +49,13 @@ const DescIcons = styled.div `
     line-height: 16px;
     color: #697786;
     font-size: 14px;
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
 
     svg {
       margin-right: 10px;
-      vertical-ali
+      vertical-align: middle;
     }
   }
-  
-  margin-bottom: 20px;
 `;
 
 const DescButtons = styled.div `
