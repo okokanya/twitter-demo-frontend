@@ -4,7 +4,24 @@ import styled from 'styled-components';
 import Avatar from './Ui/Avatar';
 import Button from './Ui/Button';
 
-import {Location, LinkIcon, Joined} from './Ui/Icon';
+import {Location, LinkIcon, Joined, Followers, Photo} from './Ui/Icon';
+import SideBlock from './Ui/SideBlock';
+import Picture from './Ui/Picture';
+
+import Avatar1 from './img/Avatar1.png';
+import Avatar2 from './img/Avatar2.png';
+import Avatar3 from './img/Avatar3.png';
+import Avatar4 from './img/Avatar4.png';
+import Avatar5 from './img/Avatar5.png';
+import Avatar6 from './img/Avatar6.png';
+
+import Photos1 from './img/Photos1.png';
+import Photos2 from './img/Photos2.png';
+import Photos3 from './img/Photos3.png';
+import Photos4 from './img/Photos4.png';
+import Photos5 from './img/Photos5.png';
+import Photos6 from './img/Photos6.png';
+
 
 const Container = styled.div `
   position: absolute;
@@ -56,7 +73,9 @@ const IconImg = styled.div `
 
 const Buttons = styled.div `
   display: flex;
+  margin-bottom: 20px;
 `;
+
 
 const ProfileDescription = () => (
   <Container>
@@ -82,6 +101,49 @@ const ProfileDescription = () => (
       <Button blue block>Tweet to</Button>
       <Button blue block>Message</Button>
     </Buttons>
+    <SideBlock icon={ Followers } count={6} title="Followers you know">
+      <Picture small src={Avatar1} />
+      <Picture small src={Avatar2} />
+      <Picture small src={Avatar3} />
+      <Picture small src={Avatar4} />
+      <Picture small src={Avatar5} />
+      <Picture small src={Avatar6} />
+    </SideBlock>
+
+    <SideBlock icon={ Photo } count={522} title="Photos and videos">
+      <Picture src={Photos1} />
+      <Picture src={Photos2} />
+      <Picture src={Photos3} />
+      <Picture src={Photos4} />
+      <Picture src={Photos5} />
+      <Picture src={Photos6} />
+    </SideBlock>
+    {/*<FollowersYouKnow>
+      <a>{}
+      Photos and videos < /a>
+      <FollowersYouKnowAvatar>
+      <img src={Avatar1}
+        alt="avatar" />
+      </FollowersYouKnowAvatar>
+      <FollowersYouKnowAvatar>
+        <img src={Avatar2} alt="avatar"/>
+      </FollowersYouKnowAvatar>
+      <FollowersYouKnowAvatar>
+        <img src={Avatar3} alt="avatar"/>
+      </FollowersYouKnowAvatar>
+      <FollowersYouKnowAvatar>
+        <img src={Avatar4} alt="avatar"/>
+      </FollowersYouKnowAvatar>
+      <FollowersYouKnowAvatar>
+        <img src={Avatar5} alt="avatar"/>
+      </FollowersYouKnowAvatar>
+      <FollowersYouKnowAvatar>
+        <img src={Avatar6} alt="avatar"/>
+      </FollowersYouKnowAvatar>
+    </FollowersYouKnow>*/}
+
+    {/* <PhotosVideos> </PhotosVideos> */}
   </Container>
 );
+
 export default ProfileDescription;
