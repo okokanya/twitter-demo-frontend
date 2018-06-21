@@ -42,9 +42,6 @@ const RightBlock = styled.div `
 
 const StatBlock = styled.div `
   display: flex;
-  > div {
-    margin-right: 20px;
-  }
 `;
 
 const Profile = () => (

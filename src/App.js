@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import React, {Component} from 'react';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import styled from 'styled-components';
-import Header from './header/Header';
+import Header from './header';
 import Profile from './pages/Profile';
 
 import './App.css';
@@ -20,10 +20,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Body>
-          <Header />
+          <Header/>
           <Switch>
-            <Route exact path="/EveryInteract" component={Profile} />
-            <Redirect to="/EveryInteract" />
+            <Route exact path="/EveryInteract" component={Profile}/>
+            <Redirect to="/EveryInteract"/>
           </Switch>
         </Body>
       </BrowserRouter>

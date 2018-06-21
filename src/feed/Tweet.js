@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {  Comment, Retweet, Likes, Envelope } from '../ui/Icon';
+import {Comment, Retweet, Likes, Envelope} from '../ui/Icon';
+
 
 const TweetContainer = styled.div `
   border-bottom: 1px solid #e6ecf0;
@@ -56,17 +57,26 @@ const TweetIcon = styled.span `
   }
 `;
 
-const Tweet = ({ children, username, time, name, avatar, stat = [] }) => (
+const Tweet = ({
+  children,
+  username,
+  time,
+  name,
+  avatar,
+  stat = []
+}) => (
   <TweetContainer>
-    <TweetAvatar><img width={50} src={avatar} alt={username} /></TweetAvatar>
+    <TweetAvatar><img width={50} src={avatar} alt={username}/></TweetAvatar>
     <TweetBody>
-      <TweetHeader><em>{name}</em> @{username} {time}</TweetHeader>
+      <TweetHeader>
+        <em>{name}</em>
+        @{username} {time}</TweetHeader>
       {children}
       <TweetIcons>
-        <TweetIcon><Comment />{stat[0] || ''}</TweetIcon>
-        <TweetIcon><Retweet />{stat[1] || ''}</TweetIcon>
-        <TweetIcon><Likes />{stat[2] || ''}</TweetIcon>
-        <TweetIcon><Envelope />{stat[3] || ''}</TweetIcon>
+        <TweetIcon><Comment/>{stat[0] || ''}</TweetIcon>
+        <TweetIcon><Retweet/>{stat[1] || ''}</TweetIcon>
+        <TweetIcon><Likes/>{stat[2] || ''}</TweetIcon>
+        <TweetIcon><Envelope/>{stat[3] || ''}</TweetIcon>
       </TweetIcons>
     </TweetBody>
   </TweetContainer>

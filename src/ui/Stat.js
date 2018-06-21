@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 const StatContainer = styled.div `
   padding: 0 10px;
-  border-bottom: 3px solid ${props => props.active ? '#1da1f2' : 'white' };
+  border-bottom: 3px solid ${props => props.active
+  ? '#1da1f2'
+  : 'white'};
   height: 60px;
   box-sizing: border-box;
   text-align: center;
@@ -11,6 +13,7 @@ const StatContainer = styled.div `
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  margin-right: 20px;
 
   :hover {
     border-bottom-color: #1da1f2;
@@ -29,10 +32,12 @@ const StatNumber = styled.div `
   font-size: 18px;
   font-weight: 500;
   padding-bottom: 15px;
-  color: ${props => props.active ? '#1da1f2' : '#66757F' };
+  color: ${props => props.active
+  ? '#1da1f2'
+  : '#66757F'};
 `;
 
-const Stat = ({ number, active, title }) => (
+const Stat = ({number, active, title}) => (
   <StatContainer active={active}>
     <StatTitle>{title}</StatTitle>
     <StatNumber active={active}>{number}</StatNumber>

@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import Tweet from './Tweet';
 import avatar from '../img/avatar.png';
 
+import resources from '../img/resources.png'
+
+
 const FeedContainer = styled.section `
   height: auto;
   background-color: white;
@@ -46,7 +49,7 @@ const Feed = () => (
       time="23h"
       stat={[0, 2, 3, 4]}>
       We’ve made some more resources for all you wonderful #design folk
-      everyinteraction.com/resources/ #webdesign #UI
+      everyinteraction.com/resources/ #webdesign #UI <img src={resources} />
     </Tweet>
     <Tweet
       avatar={avatar}
