@@ -3,25 +3,25 @@ import styled from 'styled-components';
 import {Comment, Retweet, Likes, Envelope} from '../ui/Icon';
 
 
-const TweetContainer = styled.div `
+const Container = styled.div `
   border-bottom: 1px solid #e6ecf0;
   display: flex;
   padding: 10px 20px;
 `;
 
-const TweetAvatar = styled.div `
+const Avatar = styled.div `
   width: 50px;
   padding-right: 10px;
 `;
 
-const TweetBody = styled.div `
+const Body = styled.div `
   font-size: 26px;
   font-weight: 100;
   line-height: 30px;
   flex: 1 1 0;
 `;
 
-const TweetHeader = styled.div `
+const Header = styled.div `
   height: 40px;
   display: flex;
   align-items: center;
@@ -36,7 +36,7 @@ const TweetHeader = styled.div `
   }
 `;
 
-const TweetIcons = styled.div `
+const Icons = styled.div `
   height: 40px;
   width: 50%;
   display: flex;
@@ -44,7 +44,7 @@ const TweetIcons = styled.div `
   align-items: center;
 `;
 
-const TweetIcon = styled.span `
+const Icon = styled.span `
   font-size: 14px;
   line-height: 16px;
   margin-left: 4px;
@@ -65,21 +65,21 @@ const Tweet = ({
   avatar,
   stat = []
 }) => (
-  <TweetContainer>
-    <TweetAvatar><img width={50} src={avatar} alt={username}/></TweetAvatar>
-    <TweetBody>
-      <TweetHeader>
+  <Container>
+    <Avatar><img width={50} src={avatar} alt={username}/></Avatar>
+    <Body>
+      <Header>
         <em>{name}</em>
-        @{username} {time}</TweetHeader>
+        @{username} {time}</Header>
       {children}
-      <TweetIcons>
-        <TweetIcon><Comment/>{stat[0] || ''}</TweetIcon>
-        <TweetIcon><Retweet/>{stat[1] || ''}</TweetIcon>
-        <TweetIcon><Likes/>{stat[2] || ''}</TweetIcon>
-        <TweetIcon><Envelope/>{stat[3] || ''}</TweetIcon>
-      </TweetIcons>
-    </TweetBody>
-  </TweetContainer>
+      <Icons>
+        <Icon><Comment/>{stat[0] || ''}</Icon>
+        <Icon><Re/>{stat[1] || ''}</Icon>
+        <Icon><Likes/>{stat[2] || ''}</Icon>
+        <Icon><Envelope/>{stat[3] || ''}</Icon>
+      </Icons>
+    </Body>
+  </Container>
 );
 
 export default Tweet;
