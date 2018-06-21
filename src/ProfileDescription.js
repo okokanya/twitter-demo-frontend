@@ -38,25 +38,24 @@ const Description = styled.div `
   margin-bottom: 20px;
 `;
 
-const Icon = styled.ul `
+const Icon = styled.li `
     list-style-type: none;
     line-height: 16px;
     color: #697786;
     font-size: 14px;
     margin: 10px 0 20px 0;
+    display: flex;
+    items-align: center;
+`;
 
-    svg {
-      margin-right: 10px;
-      vertical-align: middle;
-    }
+const IconImg = styled.div `
+  margin-right: 5px;
+  display: flex;
+  items-align: center;
 `;
 
 const Buttons = styled.div `
   display: flex;
-
-  button {
-    flex: 1 1 0;
-  }
 `;
 
 const ProfileDescription = () => (
@@ -68,11 +67,11 @@ const ProfileDescription = () => (
     </Subheader>
     <Description>Some info here</Description>
     <ul>
-      <Icon><Location/>London</Icon>
-      <Icon><Link/>
+      <Icon><IconImg><Location/></IconImg>London</Icon>
+      <Icon><IconImg><Link/></IconImg>
         <a href="#">everyiteraction.com</a>
       </Icon>
-      <Icon><Joined/>Joined May 2008</Icon>
+      <Icon><IconImg><Joined/></IconImg>Joined May 2008</Icon>
     </ul>
     <Buttons>
       <Button blue block>Tweet to</Button>

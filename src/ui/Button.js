@@ -6,6 +6,7 @@ const Button = styled.button `
   display: ${props => props.block ? 'block' : 'inline'};
   background-color: ${props => props.blue ? '#1da1f2' : 'white'};
   color: ${props => props.blue ? "white" : "#1da1f2"};
+  flex-grow: ${props => props.block ? '1' : 'none'};
   border-color: #1da1f2;
   border-width: 2px;
   cursor: pointer;

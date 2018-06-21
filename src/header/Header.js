@@ -1,18 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from '../ui/Container';
-import {
-  Home,
-  Moments,
-  Notifications,
-  Messages,
-  TwitterIcon
-} from '../ui/Icon';
+import {Home, Moments, Notifications, Messages, TwitterIcon} from '../ui/Icon';
 import Avatar from '../ui/Avatar';
 import Button from '../ui/Button';
 import SearchInput from '../ui/SearchInput';
 
-const HeaderNav = styled.div `
+const Nav = styled.div `
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +16,7 @@ const HeaderNav = styled.div `
   position: relative;
 `;
 
-const HeaderNavBlock = styled.div `
+const NavBlock = styled.div `
   display: flex;
   align-items: center;
   div {
@@ -30,7 +24,7 @@ const HeaderNavBlock = styled.div `
   }
 `;
 
-const HeaderNavItem = styled.div `
+const NavItem = styled.div `
   display: flex;
   color: #66757F;
   font-size: 13px;
@@ -59,22 +53,22 @@ const TwitterLogo = styled.div `
 
 const Header = () => (
   <Container>
-    <HeaderNav>
-      <HeaderNavBlock>
-        <HeaderNavItem><Home />Home</HeaderNavItem>
-        <HeaderNavItem><Moments />Moments</HeaderNavItem>
-        <HeaderNavItem><Notifications />Notifications</HeaderNavItem>
-        <HeaderNavItem><Messages />Messages</HeaderNavItem>
-      </HeaderNavBlock>
-      <HeaderNavBlock>
+    <Nav>
+      <NavBlock>
+        <NavItem><Home />Home</NavItem>
+        <NavItem><Moments />Moments</NavItem>
+        <NavItem><Notifications />Notifications</NavItem>
+        <NavItem><Messages />Messages</NavItem>
+      </NavBlock>
+      <NavBlock>
         <SearchInput placeholder="Search Twitter" />
         <Avatar small />
         <Button blue>Tweet</Button>
-      </HeaderNavBlock>
+      </NavBlock>
       <TwitterLogo>
         <TwitterIcon />
       </TwitterLogo>
-    </HeaderNav>
+    </Nav>
   </Container>
 );
 
