@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Comment, Retweet, Likes, Envelope} from '../ui/Icon';
+import { distanceInWords } from 'date-fns';
+
 
 const Container = styled.div `
   border-bottom: 1px solid #e6ecf0;
@@ -69,7 +71,7 @@ const Tweet = ({
     <Body>
       <Header>
         <em>{name}</em>
-        @{username} {time}</Header>
+        @{username} {distanceInWords(time, new Date())}</Header>
       {children}
       <Icons>
         <Icon><Comment/>{stat.comment || ''}</Icon>
