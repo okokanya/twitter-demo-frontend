@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Avatar from './ui/Avatar';
 import Button from './ui/Button';
 
-import { Location, LinkIcon, Joined } from './ui/Icon';
+import {Location, LinkIcon, Joined} from './ui/Icon';
 
 const Container = styled.div `
   position: absolute;
@@ -39,13 +39,13 @@ const Description = styled.div `
 `;
 
 const Icon = styled.li `
-    list-style-type: none;
-    line-height: 16px;
-    color: #697786;
-    font-size: 14px;
-    margin: 10px 0 20px 0;
-    display: flex;
-    align-items: center;
+  list-style-type: none;
+  line-height: 16px;
+  color: #697786;
+  font-size: 14px;
+  margin: 10px 0 20px 0;
+  display: flex;
+  align-items: center;
 `;
 
 const IconImg = styled.div `
@@ -60,7 +60,7 @@ const Buttons = styled.div `
 
 const ProfileDescription = () => (
   <Container>
-    <DescAvatar><Avatar big /></DescAvatar>
+    <DescAvatar><Avatar big/></DescAvatar>
     <Header>Every Interaction</Header>
     <Subheader>@EveryInteract
       <span>follows you</span>
@@ -68,14 +68,14 @@ const ProfileDescription = () => (
     <Description>Some info here</Description>
     <ul>
       <Icon>
-        <IconImg><Location /></IconImg>London
+        <IconImg><Location/></IconImg>London
       </Icon>
       <Icon>
-        <IconImg><LinkIcon /></IconImg>
-        <a href="#a" >everyiteraction.com</a>
+        <IconImg><LinkIcon/></IconImg>
+        <a href="#a">everyiteraction.com</a>
       </Icon>
       <Icon>
-        <IconImg><Joined /></IconImg>Joined May 2008
+        <IconImg><Joined/></IconImg>Joined May 2008
       </Icon>
     </ul>
     <Buttons>
@@ -84,5 +84,4 @@ const ProfileDescription = () => (
     </Buttons>
   </Container>
 );
-
 export default ProfileDescription;

@@ -14,9 +14,10 @@ const FeedContainer = styled.section `
 `;
 
 const FeedTabs = styled.div `
-  height: 50px;
+  /* height: 50px; */
+
   display: flex;
-  padding: 5px 20px 0 20px;
+  padding: 20px;
   align-items: center;
   border-bottom: 1px solid #e6ecf0;
 `;
