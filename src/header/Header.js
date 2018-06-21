@@ -17,11 +17,6 @@ const Nav = styled.div `
 
 const NavBlock = styled.div `
   display: flex;
-  align-items: center;
-
-  /* div {
-    margin: 0 10px;
-  } */
 `;
 const Margin = styled.div `
   margin: 0 10px;
@@ -62,23 +57,37 @@ const Header = () => (
   <Container>
     <Nav>
       <NavBlock>
+      <Margin>
         <NavItem>
-          <NavItemImg><Home/></NavItemImg><Margin>Home</Margin>
+          <NavItemImg><Home/></NavItemImg>Home
         </NavItem>
+        </Margin>
+        <Margin>
         <NavItem>
           <NavItemImg><Moments/></NavItemImg><Margin>Moments</Margin>
         </NavItem>
+        </Margin>
+        <Margin>
         <NavItem>
           <NavItemImg><Notifications/></NavItemImg><Margin>Notifications</Margin>
         </NavItem>
+        </Margin>
+        <Margin>
         <NavItem>
           <NavItemImg><Messages/></NavItemImg><Margin>Messages</Margin>
         </NavItem>
+        </Margin>
       </NavBlock>
       <NavBlock>
+        <Margin>
         <SearchInput placeholder="Search Twitter"/>
+        </Margin>
+        <Margin>
         <Avatar small/>
+        </Margin>
+        <Margin>
         <Button blue>Tweet</Button>
+        </Margin>
       </NavBlock>
       <TwitterLogo>
         <TwitterIcon/>
