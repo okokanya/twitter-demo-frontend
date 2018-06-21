@@ -32,6 +32,7 @@ const StatNumber = styled.div `
   color: ${props => props.active ? '#1da1f2' : '#66757F' }
 `;
 
+
 const Stat = ({ number, active, title }) => (
   <StatContainer active={active}>
     <StatTitle>{title}</StatTitle>

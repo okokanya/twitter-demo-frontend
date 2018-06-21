@@ -7,7 +7,7 @@ import {
   Notifications,
   Messages,
   TwitterIcon
-} from '../ui/Icon.js';
+} from '../ui/Icon';
 import Avatar from '../ui/Avatar';
 import Button from '../ui/Button';
 import SearchInput from '../ui/SearchInput';

@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import Avatar from './ui/Avatar';
 import Button from './ui/Button';
 
-import { Location, Link, Joined } from './ui/Icon';
+import {Location, Link, Joined} from './ui/Icon';
 
-const DescContainer = styled.div `
+const Container = styled.div `
   position: absolute;
   left: 0;
   top: 0;
@@ -18,12 +18,12 @@ const DescAvatar = styled.div `
   margin-bottom: 20px;
 `;
 
-const DescHeader = styled.div `
+const Header = styled.div `
   font-size: 22px;
   font-weight: 800;
 `;
 
-const DescSubheader = styled.div `
+const Subheader = styled.div `
   color: #697786;
   font-size: 14px;
   margin-bottom: 20px;
@@ -33,18 +33,12 @@ const DescSubheader = styled.div `
   }
 `;
 
-const Desc = styled.div `
+const Description = styled.div `
   font-size: 14px;
   margin-bottom: 20px;
 `;
 
-const DescIcons = styled.div `
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
+const Icon = styled.ul `
     list-style-type: none;
     line-height: 16px;
     color: #697786;
@@ -55,10 +49,9 @@ const DescIcons = styled.div `
       margin-right: 10px;
       vertical-align: middle;
     }
-  }
 `;
 
-const DescButtons = styled.div `
+const Buttons = styled.div `
   display: flex;
 
   button {
@@ -67,23 +60,25 @@ const DescButtons = styled.div `
 `;
 
 const ProfileDescription = () => (
-  <DescContainer>
-    <DescAvatar><Avatar big /></DescAvatar>
-    <DescHeader>Every Interaction</DescHeader>
-    <DescSubheader>@EveryInteract <span>follows you</span></DescSubheader>
-    <Desc>Some info here</Desc>
-    <DescIcons>
-      <ul>
-        <li><Location />London</li>
-        <li><Link /><a href="#">everyiteraction.com</a></li>
-        <li><Joined />Joined May 2008</li>
-      </ul>
-    </DescIcons>
-    <DescButtons>
+  <Container>
+    <DescAvatar><Avatar big/></DescAvatar>
+    <Header>Every Interaction</Header>
+    <Subheader>@EveryInteract
+      <span>follows you</span>
+    </Subheader>
+    <Description>Some info here</Description>
+    <ul>
+      <Icon><Location/>London</Icon>
+      <Icon><Link/>
+        <a href="#">everyiteraction.com</a>
+      </Icon>
+      <Icon><Joined/>Joined May 2008</Icon>
+    </ul>
+    <Buttons>
       <Button blue block>Tweet to</Button>
       <Button blue block>Message</Button>
-    </DescButtons>
-  </DescContainer>
+    </Buttons>
+  </Container>
 );
 
 export default ProfileDescription;
