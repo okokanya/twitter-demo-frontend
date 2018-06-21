@@ -6,7 +6,7 @@ import ProfileDescription from '../ProfileDescription';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import Stat from '../ui/Stat';
-import { More } from '../ui/Icon';
+import {More} from '../ui/Icon';
 
 import headerImg from '../img/headerImg.png';
 
@@ -20,6 +20,7 @@ const Content = styled.div `
   background: #E6ECF0;
   padding-top: 8px;
 `;
+
 const HeaderImg = styled.div `
   height: 380px;
   width: 100%;
@@ -48,29 +49,29 @@ const StatBlock = styled.div `
 
 const Profile = () => (
   <div>
-    <HeaderImg />
+    <HeaderImg/>
     <Statistic>
       <Container>
         <Container small>
           <StatBlock>
-            <Stat number="8,058" title="Tweets" active />
-            <Stat number="721" title="Following" />
-            <Stat number="1,815" title="Followers" />
-            <Stat number="460" title="Likes" />
-            <Stat number="2" title="Lists" />
+            <Stat number="8,058" title="Tweets" active/>
+            <Stat number="721" title="Following"/>
+            <Stat number="1,815" title="Followers"/>
+            <Stat number="460" title="Likes"/>
+            <Stat number="2" title="Lists"/>
           </StatBlock>
         </Container>
         <RightBlock>
           <Button>Follow</Button>
-          <More />
+          <More/>
         </RightBlock>
       </Container>
     </Statistic>
     <Content>
       <Container>
-        <ProfileDescription />
+        <ProfileDescription/>
         <Container small>
-          <Feed />
+          <Feed/>
         </Container>
       </Container>
     </Content>
