@@ -74,7 +74,7 @@ const Tweet = ({
       {children}
       <Icons>
         <Icon><Comment/>{stat[0] || ''}</Icon>
-        <Icon><Re/>{stat[1] || ''}</Icon>
+        <Icon><Retweet/>{stat[1] || ''}</Icon>
         <Icon><Likes/>{stat[2] || ''}</Icon>
         <Icon><Envelope/>{stat[3] || ''}</Icon>
       </Icons>
