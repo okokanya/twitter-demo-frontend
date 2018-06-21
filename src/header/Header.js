@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Container from '../ui/Container';
-import {Home, Moments, Notifications, Messages, TwitterIcon} from '../ui/Icon';
-import Avatar from '../ui/Avatar';
-import Button from '../ui/Button';
-import SearchInput from '../ui/SearchInput';
+import Container from '../Ui/Container';
+import {Home, Moments, Notifications, Messages, TwitterIcon} from '../Ui/Icon';
+import Avatar from '../Ui/Avatar';
+import Button from '../Ui/Button';
+import SearchInput from '../Ui/SearchInput';
 
 const Nav = styled.div `
   display: flex;
@@ -57,36 +57,39 @@ const Header = () => (
   <Container>
     <Nav>
       <NavBlock>
-      <Margin>
-        <NavItem>
-          <NavItemImg><Home/></NavItemImg>Home
-        </NavItem>
+        <Margin>
+          <NavItem>
+            <NavItemImg><Home/></NavItemImg>Home
+          </NavItem>
         </Margin>
         <Margin>
-        <NavItem>
-          <NavItemImg><Moments/></NavItemImg><Margin>Moments</Margin>
-        </NavItem>
+          <NavItem>
+            <NavItemImg><Moments/></NavItemImg>
+            <Margin>Moments</Margin>
+          </NavItem>
         </Margin>
         <Margin>
-        <NavItem>
-          <NavItemImg><Notifications/></NavItemImg><Margin>Notifications</Margin>
-        </NavItem>
+          <NavItem>
+            <NavItemImg><Notifications/></NavItemImg>
+            <Margin>Notifications</Margin>
+          </NavItem>
         </Margin>
         <Margin>
-        <NavItem>
-          <NavItemImg><Messages/></NavItemImg><Margin>Messages</Margin>
-        </NavItem>
+          <NavItem>
+            <NavItemImg><Messages/></NavItemImg>
+            <Margin>Messages</Margin>
+          </NavItem>
         </Margin>
       </NavBlock>
       <NavBlock>
         <Margin>
-        <SearchInput placeholder="Search Twitter"/>
+          <SearchInput placeholder="Search Twitter"/>
         </Margin>
         <Margin>
-        <Avatar small/>
+          <Avatar small/>
         </Margin>
         <Margin>
-        <Button blue>Tweet</Button>
+          <Button blue>Tweet</Button>
         </Margin>
       </NavBlock>
       <TwitterLogo>

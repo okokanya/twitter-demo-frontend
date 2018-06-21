@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Comment, Retweet, Likes, Envelope} from '../ui/Icon';
+import {Comment, Retweet, Likes, Envelope} from '../Ui/Icon';
 import { distanceInWords } from 'date-fns';
 
 

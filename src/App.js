@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import styled from 'styled-components';
-import Header from './header';
-import Profile from './pages/Profile';
+import Header from './Header';
+import Profile from './Pages/Profile';
 
 import './App.css';
 

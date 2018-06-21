@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Feed from '../feed/Feed';
+import Feed from '../Feed/Feed';
 import ProfileDescription from '../ProfileDescription';
-import Container from '../ui/Container';
-import Button from '../ui/Button';
-import Stat from '../ui/Stat';
-import {More} from '../ui/Icon';
+import Container from '../Ui/Container';
+import Button from '../Ui/Button';
+import Stat from '../Ui/Stat';
+import {More} from '../Ui/Icon';
 
 import headerImg from '../img/headerImg.png';
 

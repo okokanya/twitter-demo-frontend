@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Avatar from './ui/Avatar';
-import Button from './ui/Button';
+import Avatar from './Ui/Avatar';
+import Button from './Ui/Button';
 
-import {Location, LinkIcon, Joined} from './ui/Icon';
+import {Location, LinkIcon, Joined} from './Ui/Icon';
 
 const Container = styled.div `
   position: absolute;
