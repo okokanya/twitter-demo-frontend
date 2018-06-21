@@ -51,11 +51,11 @@ const Profile = () => (
       <Container>
         <Container small>
           <StatBlock>
-            <Stat number="8,058" title="Tweets" active/>
-            <Stat number="721" title="Following"/>
-            <Stat number="1,815" title="Followers"/>
-            <Stat number="460" title="Likes"/>
-            <Stat number="2" title="Lists"/>
+            <Stat number={8058} title="Tweets" active/>
+            <Stat number={721} title="Following"/>
+            <Stat number={1815} title="Followers"/>
+            <Stat number={460} title="Likes"/>
+            <Stat number={2} title="Lists"/>
           </StatBlock>
         </Container>
         <RightBlock>
