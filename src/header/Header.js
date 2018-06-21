@@ -18,10 +18,14 @@ const Nav = styled.div `
 const NavBlock = styled.div `
   display: flex;
   align-items: center;
-  div {
+
+  /* div {
     margin: 0 10px;
-  }
+  } */
 `;
+const Margin = styled.div `
+  margin: 0 10px;
+`
 
 const NavItem = styled.div `
   display: flex;
@@ -59,16 +63,16 @@ const Header = () => (
     <Nav>
       <NavBlock>
         <NavItem>
-          <NavItemImg><Home/></NavItemImg>Home
+          <NavItemImg><Home/></NavItemImg><Margin>Home</Margin>
         </NavItem>
         <NavItem>
-          <NavItemImg><Moments/></NavItemImg>Moments
+          <NavItemImg><Moments/></NavItemImg><Margin>Moments</Margin>
         </NavItem>
         <NavItem>
-          <NavItemImg><Notifications/></NavItemImg>Notifications
+          <NavItemImg><Notifications/></NavItemImg><Margin>Notifications</Margin>
         </NavItem>
         <NavItem>
-          <NavItemImg><Messages/></NavItemImg>Messages
+          <NavItemImg><Messages/></NavItemImg><Margin>Messages</Margin>
         </NavItem>
       </NavBlock>
       <NavBlock>
