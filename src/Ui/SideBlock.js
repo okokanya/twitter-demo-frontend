@@ -22,7 +22,7 @@ const Margin = styled.div `
   margin-right: 5px;
 `;
 
-const SideBlock = ({ icon: Icon, count, title, children }) => (
+const LeftSideBlock = ({ icon: Icon, count, title, children }) => (
   <Wrapper>
     <Header><Margin><Icon/></Margin> {count} {title}</Header>
     <Content>
@@ -31,4 +31,4 @@ const SideBlock = ({ icon: Icon, count, title, children }) => (
   </Wrapper>
 );
 
-export default SideBlock;
+export default LeftSideBlock;

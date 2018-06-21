@@ -5,7 +5,7 @@ import Avatar from './Ui/Avatar';
 import Button from './Ui/Button';
 
 import {Location, LinkIcon, Joined, Followers, Photo} from './Ui/Icon';
-import SideBlock from './Ui/SideBlock';
+import LeftSideBlock from './Ui/LeftSideBlock';
 import Picture from './Ui/Picture';
 
 import Avatar1 from './img/Avatar1.png';
@@ -101,48 +101,23 @@ const ProfileDescription = () => (
       <Button blue block>Tweet to</Button>
       <Button blue block>Message</Button>
     </Buttons>
-    <SideBlock icon={ Followers } count={6} title="Followers you know">
+    <LeftSideBlock icon={ Followers } count={6} title="Followers you know">
       <Picture small src={Avatar1} />
       <Picture small src={Avatar2} />
       <Picture small src={Avatar3} />
       <Picture small src={Avatar4} />
       <Picture small src={Avatar5} />
       <Picture small src={Avatar6} />
-    </SideBlock>
+    </LeftSideBlock>
 
-    <SideBlock icon={ Photo } count={522} title="Photos and videos">
+    <LeftSideBlock icon={ Photo } count={522} title="Photos and videos">
       <Picture src={Photos1} />
       <Picture src={Photos2} />
       <Picture src={Photos3} />
       <Picture src={Photos4} />
       <Picture src={Photos5} />
       <Picture src={Photos6} />
-    </SideBlock>
-    {/*<FollowersYouKnow>
-      <a>{}
-      Photos and videos < /a>
-      <FollowersYouKnowAvatar>
-      <img src={Avatar1}
-        alt="avatar" />
-      </FollowersYouKnowAvatar>
-      <FollowersYouKnowAvatar>
-        <img src={Avatar2} alt="avatar"/>
-      </FollowersYouKnowAvatar>
-      <FollowersYouKnowAvatar>
-        <img src={Avatar3} alt="avatar"/>
-      </FollowersYouKnowAvatar>
-      <FollowersYouKnowAvatar>
-        <img src={Avatar4} alt="avatar"/>
-      </FollowersYouKnowAvatar>
-      <FollowersYouKnowAvatar>
-        <img src={Avatar5} alt="avatar"/>
-      </FollowersYouKnowAvatar>
-      <FollowersYouKnowAvatar>
-        <img src={Avatar6} alt="avatar"/>
-      </FollowersYouKnowAvatar>
-    </FollowersYouKnow>*/}
-
-    {/* <PhotosVideos> </PhotosVideos> */}
+    </LeftSideBlock>
   </Container>
 );
 
