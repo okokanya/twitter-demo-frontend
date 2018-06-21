@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from '../ui/Container';
-import {Home, Moments, Notifications, Messages, TwitterIcon} from '../ui/Icon';
+import { Home, Moments, Notifications, Messages, TwitterIcon } from '../ui/Icon';
 import Avatar from '../ui/Avatar';
 import Button from '../ui/Button';
 import SearchInput from '../ui/SearchInput';
@@ -59,10 +59,18 @@ const Header = () => (
   <Container>
     <Nav>
       <NavBlock>
-        <NavItem><NavItemImg><Home /></NavItemImg>Home</NavItem>
-        <NavItem><NavItemImg><Moments /></NavItemImg>Moments</NavItem>
-        <NavItem><NavItemImg><Notifications /></NavItemImg>Notifications</NavItem>
-        <NavItem><NavItemImg><Messages /></NavItemImg>Messages</NavItem>
+        <NavItem>
+          <NavItemImg><Home /></NavItemImg>Home
+        </NavItem>
+        <NavItem>
+          <NavItemImg><Moments /></NavItemImg>Moments
+        </NavItem>
+        <NavItem>
+          <NavItemImg><Notifications /></NavItemImg>Notifications
+        </NavItem>
+        <NavItem>
+          <NavItemImg><Messages /></NavItemImg>Messages
+        </NavItem>
       </NavBlock>
       <NavBlock>
         <SearchInput placeholder="Search Twitter" />

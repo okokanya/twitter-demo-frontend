@@ -156,63 +156,63 @@ const Joined = () => (
       stroke="#657786"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 2C0 0.895431 0.895431 0 2 0H14C15.1046 0 16 0.895431 16 2V3H0V2Z"
       fill="#657786"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 0H2V2H0V0Z"
       transform="translate(3 5)"
       fill="#657786"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 0H2V2H0V0Z"
       transform="translate(7 5)"
       fill="#657786"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 0H2V2H0V0Z"
       transform="translate(11 5)"
       fill="#657786"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 0H2V2H0V0Z"
       transform="translate(11 8)"
       fill="#657786"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 0H2V2H0V0Z"
       transform="translate(7 8)"
       fill="#657786"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 0H2V2H0V0Z"
       transform="translate(3 8)"
       fill="#657786"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 0H2V2H0V0Z"
       transform="translate(3 11)"
       fill="#657786"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 0H2V2H0V0Z"
       transform="translate(7 11)"
       fill="#657786"
@@ -220,7 +220,7 @@ const Joined = () => (
   </svg>
 );
 
-const Link = () => (
+const LinkIcon = () => (
   <svg
     width="16"
     height="17"
@@ -232,13 +232,13 @@ const Link = () => (
       d="M2.82398 8.78302C2.15146 8.67336 1.50591 8.35991 0.987389 7.84267C-0.32913 6.5294 -0.32913 4.40043 0.987389 3.08767L3.27872 0.984569C4.59524 -0.32819 6.72894 -0.32819 8.04494 0.984569C9.36146 2.29784 9.36146 4.42629 8.04494 5.73905L6.73154 7.08802"
       transform="translate(5.53712 1.00012)"
       stroke="#657888"
-      stroke-linecap="round"
+      strokeLinecap="round"
     />
     <path
       d="M6.43507 0C7.17396 0.0786207 7.89159 0.400345 8.4573 0.965172C9.77381 2.27845 9.77381 4.40741 8.4573 5.72017L5.75374 8.41707C4.43722 9.73035 2.30352 9.73035 0.987 8.41707C-0.329 7.10431 -0.329 4.97586 0.987 3.66259L2.43885 2.21483"
       transform="translate(0.999897 6.41394)"
       stroke="#657888"
-      stroke-linecap="round"
+      strokeLinecap="round"
     />
   </svg>
 );
@@ -252,8 +252,8 @@ const Location = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M6.5 14C7.04167 14 13 9.31371 13 6C13 2.68629 10.0899 0 6.5 0C2.91015 0 0 2.68629 0 6C0 9.31371 5.95833 14 6.5 14Z"
       transform="translate(1 1)"
       stroke="#657786"
@@ -289,8 +289,8 @@ const Photo = () => (
       stroke="#687A88"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0.5 1C0.776142 1 1 0.776142 1 0.5C1 0.223858 0.776142 0 0.5 0C0.223858 0 0 0.223858 0 0.5C0 0.776142 0.223858 1 0.5 1Z"
       transform="translate(5 4)"
       stroke="#687A88"
@@ -309,11 +309,11 @@ const Comment = () => (
     <path
       fill-
       rule="evenodd"
-      clip-rule="evenodd"
+      clipRule="evenodd"
       d="M0 5.39922C0 2.41732 2.41732 0 5.39922 0H8.37057C11.4796 0 14 2.52038 14 5.62943V5.62943C14 7.7047 12.8582 9.61167 11.0289 10.5917L5.6 13.5V10.9L4.54249 10.73C1.92488 10.3094 0 8.05042 0 5.39922V5.39922Z"
       transform="translate(1 1)"
       stroke="#70818F"
-      stroke-width="1.5"
+      strokeWidth="1.5"
     />
   </svg>
 );
@@ -327,8 +327,8 @@ const Retweet = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M7.75256 4.43005L7 5.0885L4.37628 2.08997V10.2593C4.37628 11.0876 5.04785 11.7593 5.87628 11.7593H11.3763V12.7593H5.87628C4.49557 12.7593 3.37628 11.64 3.37628 10.2593V2.08997L0.752563 5.0885L0 4.43005L3.87628 0L7.75256 4.43005ZM13.5 2H8V1H13.5C14.8807 1 16 2.11926 16 3.5V11.6693L18.6237 8.67078L19.3763 9.32922L15.5 13.7593L11.6237 9.32922L12.3763 8.67078L15 11.6693V3.5C15 2.67163 14.3284 2 13.5 2Z"
       fill="#657786"
     />
@@ -344,12 +344,12 @@ const Likes = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M7.29288 13.2444C7.29288 13.2444 2.6947 9.8645 1.5365 8.38818C-0.374329 5.95264 -0.122192 3.90466 0.292877 2.24438C0.516693 1.349 1.03912 0.686646 2.29288 0.244385C3.54663 -0.197998 4.91339 0.0596924 5.29288 0.244385C5.86462 0.522583 6.97675 1.85718 7.2373 2.1759C7.49786 1.85718 8.60999 0.522583 9.18173 0.244385C9.56122 0.0596924 10.928 -0.197998 12.1817 0.244385C13.4355 0.686646 13.9579 1.349 14.1817 2.24438C14.5979 3.90894 14.8451 5.96326 12.9232 8.40723C11.7663 9.87842 7.29285 13.2444 7.29288 13.2444Z"
       transform="translate(1.70715 0.755615)"
       stroke="#748592"
-      stroke-width="1.5"
+      strokeWidth="1.5"
     />
   </svg>
 );
@@ -383,7 +383,7 @@ export {
   More,
   Magnifier,
   Joined,
-  Link,
+  LinkIcon,
   Photo,
   Location,
   Comment,

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Avatar from './ui/Avatar';
 import Button from './ui/Button';
 
-import { Location, Link, Joined } from './ui/Icon';
+import { Location, LinkIcon, Joined } from './ui/Icon';
 
 const Container = styled.div `
   position: absolute;
@@ -45,13 +45,13 @@ const Icon = styled.li `
     font-size: 14px;
     margin: 10px 0 20px 0;
     display: flex;
-    items-align: center;
+    align-items: center;
 `;
 
 const IconImg = styled.div `
   margin-right: 5px;
   display: flex;
-  items-align: center;
+  align-items: center;
 `;
 
 const Buttons = styled.div `
@@ -60,18 +60,23 @@ const Buttons = styled.div `
 
 const ProfileDescription = () => (
   <Container>
-    <DescAvatar><Avatar big/></DescAvatar>
+    <DescAvatar><Avatar big /></DescAvatar>
     <Header>Every Interaction</Header>
     <Subheader>@EveryInteract
       <span>follows you</span>
     </Subheader>
     <Description>Some info here</Description>
     <ul>
-      <Icon><IconImg><Location/></IconImg>London</Icon>
-      <Icon><IconImg><Link/></IconImg>
-        <a href="#">everyiteraction.com</a>
+      <Icon>
+        <IconImg><Location /></IconImg>London
       </Icon>
-      <Icon><IconImg><Joined/></IconImg>Joined May 2008</Icon>
+      <Icon>
+        <IconImg><LinkIcon /></IconImg>
+        <a href="#a" >everyiteraction.com</a>
+      </Icon>
+      <Icon>
+        <IconImg><Joined /></IconImg>Joined May 2008
+      </Icon>
     </ul>
     <Buttons>
       <Button blue block>Tweet to</Button>

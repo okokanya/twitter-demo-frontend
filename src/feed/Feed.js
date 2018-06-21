@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Tweet from './Tweet';
@@ -21,7 +21,9 @@ const FeedTabs = styled.div `
 const FeedTab = styled.div `
   font-size: 20px;
   font-weight: bold;
-  color: ${props => props.active ? 'black' : '#1da1f2'};
+  color: ${props => (props.active
+  ? 'black'
+  : '#1da1f2')};
   margin-right: 20px;
   cursor: pointer;
 
@@ -29,6 +31,7 @@ const FeedTab = styled.div `
     color: black;
   }
 `;
+
 const Feed = () => (
   <FeedContainer>
     <FeedTabs>
