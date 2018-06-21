@@ -14,8 +14,6 @@ const FeedContainer = styled.section `
 `;
 
 const FeedTabs = styled.div `
-  /* height: 50px; */
-
   display: flex;
   padding: 20px;
   align-items: center;
