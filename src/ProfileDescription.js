@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Avatar from './ui/Avatar';
 import Button from './ui/Button';
 
-import {Location, Link, Joined} from './ui/Icon';
+import { Location, Link, Joined } from './ui/Icon';
 
 const Container = styled.div `
   position: absolute;

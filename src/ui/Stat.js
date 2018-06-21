@@ -29,9 +29,8 @@ const StatNumber = styled.div `
   font-size: 18px;
   font-weight: 500;
   padding-bottom: 15px;
-  color: ${props => props.active ? '#1da1f2' : '#66757F' }
+  color: ${props => props.active ? '#1da1f2' : '#66757F' };
 `;
-
 
 const Stat = ({ number, active, title }) => (
   <StatContainer active={active}>

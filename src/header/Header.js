@@ -31,13 +31,17 @@ const NavItem = styled.div `
   font-weight: 500;
   line-height: 20px;
   word-spacing: 5px;
+  align-item: center;
   cursor: pointer;
-  svg {
-    margin-right: 5px;
-  }
   :hover {
     opacity: .5;
   }
+`;
+
+const NavItemImg = styled.div `
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
 `;
 
 const TwitterLogo = styled.div `
@@ -55,10 +59,10 @@ const Header = () => (
   <Container>
     <Nav>
       <NavBlock>
-        <NavItem><Home />Home</NavItem>
-        <NavItem><Moments />Moments</NavItem>
-        <NavItem><Notifications />Notifications</NavItem>
-        <NavItem><Messages />Messages</NavItem>
+        <NavItem><NavItemImg><Home /></NavItemImg>Home</NavItem>
+        <NavItem><NavItemImg><Moments /></NavItemImg>Moments</NavItem>
+        <NavItem><NavItemImg><Notifications /></NavItemImg>Notifications</NavItem>
+        <NavItem><NavItemImg><Messages /></NavItemImg>Messages</NavItem>
       </NavBlock>
       <NavBlock>
         <SearchInput placeholder="Search Twitter" />
