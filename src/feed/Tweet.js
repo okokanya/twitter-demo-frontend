@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import {Comment, Retweet, Likes, Envelope} from '../ui/Icon';
 
-
 const Container = styled.div `
   border-bottom: 1px solid #e6ecf0;
   display: flex;
@@ -73,10 +72,10 @@ const Tweet = ({
         @{username} {time}</Header>
       {children}
       <Icons>
-        <Icon><Comment/>{stat[0] || ''}</Icon>
-        <Icon><Retweet/>{stat[1] || ''}</Icon>
-        <Icon><Likes/>{stat[2] || ''}</Icon>
-        <Icon><Envelope/>{stat[3] || ''}</Icon>
+        <Icon><Comment/>{stat.comment || ''}</Icon>
+        <Icon><Retweet/>{stat.retweet || ''}</Icon>
+        <Icon><Likes/>{stat.like || ''}</Icon>
+        <Icon><Envelope/>{stat.message || ''}</Icon>
       </Icons>
     </Body>
   </Container>
