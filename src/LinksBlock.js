@@ -28,7 +28,7 @@ const LinksBlock = () => (
     </RightSideBlock>
     <RightSideBlock title="United Kingdom Trends">
       <Trend title="#BrongYourDogToWorkDay" link="#" count={234} />
-      <Trend title="#FridayFeeling" link="#" count={12100} />
+      <Trend title="#FridayFeeling" link="#" count={12123} />
       <Trend title="#BrexitAnniversary" link="#">
         It's one year since the UK voted to leave the European Union
       </Trend>

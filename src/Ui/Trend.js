@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormattedNumber } from 'react-intl'
+// import { FormattedNumber } from 'react-intl'
 
 const Wrapper = styled.div `
   margin-bottom: 20px;
@@ -16,10 +16,17 @@ const Header = styled.a `
   text-decoration: none;
 `;
 
+const makeMeTheKey = input => {
+  if (input > 1200) {
+    return(Math.round((input/1000) * 10) / 10 + 'K');
+  }
+  return input
+};
+
 const Trend = ({ title, count, link, children}) => (
   <Wrapper>
     <Header href={link}>{title}</Header>
-    {count && <span><FormattedNumber value={count} /> Tweets</span>}
+    {count && <span>{makeMeTheKey(count)} Tweets</span>}
     {children}
   </Wrapper>
 );
