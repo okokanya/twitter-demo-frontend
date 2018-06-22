@@ -24,11 +24,10 @@ const HeaderLink = styled.div `
   white-space: nowrap;
   font-weight: 200;
   color: #6E7683;
-  display: flex;
-  align-items: center;
 
   svg {
-    margin-right: 5px;
+    vertical-align: middle;
+    padding-right: 5px;
   }
 `;
 const RightSideBlock = ({title, children, links}) => (
