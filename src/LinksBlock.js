@@ -45,7 +45,6 @@ const whoToFollowLinks = [
   <a href="#">View All</a>
 ];
 
-
 const trendsLinks = [
   <a href="#">Change</a>
 ];

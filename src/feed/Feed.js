@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Tweet from './Tweet';
+import Embed from '../Ui/Embed';
+
 import avatar from '../img/avatar.png';
+import ill from '../img/ill.png';
 
 import resources from '../img/resources.png'
 
@@ -72,6 +75,9 @@ const Feed = () => (
     >
       Variable web fonts are coming, and will open a world of opportunities for weight
       use online
+      <Embed img={ill} title="The Future of Web Fonts" text="We love typefaces. They give our sites and applications personalized feel. They convey the information and tell a story. They establish information hierarchy. But they’re…" link="vilijamis.com" linkUrl="http://vilijamis.com/" >
+
+      </Embed>
     </Tweet>
 
   </FeedContainer>
