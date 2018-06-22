@@ -16,10 +16,14 @@ const Avatar = styled.div `
 `;
 
 const Body = styled.div `
-  font-size: 26px;
+  font-size: ${props => props.big ? '26px' : '16px'};
   font-weight: 100;
-  line-height: 30px;
+  line-height: ${props => props.big ? '30px' : '20px'};;
   flex: 1 1 0;
+
+  img {
+    margin: 10px 0;
+  }
 `;
 
 const Header = styled.div `
@@ -59,16 +63,18 @@ const Icon = styled.span `
 `;
 
 const Tweet = ({
+  pinned,
   children,
   username,
   time,
   name,
   avatar,
-  stat = []
+  stat = [],
+  big
 }) => (
   <Container>
     <Avatar><img width={50} src={avatar} alt={username}/></Avatar>
-    <Body>
+    <Body big={big}>
       <Header>
         <em>{name}</em>
         @{username} {distanceInWords(time, new Date())}</Header>

@@ -46,7 +46,9 @@ const Feed = () => (
       username="EveryInteract"
       name="Every Interaction"
       time={new Date(2018, 6, 20)}
-      stat={{comment: 10, retweet: 2, like: 3, message: 4, liked: true }}>
+      stat={{comment: 10, retweet: 2, like: 3, message: 4, liked: true }}
+      big
+    >
       We’ve made some more resources for all you wonderful #design folk 
       <a href="everyinteraction.com/resources/">everyinteraction.com/resources/</a> #webdesign #UI <img src={resources} />
     </Tweet>
@@ -55,7 +57,9 @@ const Feed = () => (
       username="EveryInteract"
       name="Every Interaction"
       time={new Date(2018, 6, 20)}
-      stat={{comment: 0, retweet: 62, like: 30, message: 4}}>
+      stat={{comment: 0, retweet: 62, like: 30, message: 4}}
+      big
+    >
       Our new website concept; Taking you from… @ Every Interaction
       instagram.com/p/BNFGrfhBP3M/
     </Tweet>
@@ -64,7 +68,8 @@ const Feed = () => (
       username="EveryInteract"
       name="Every Interaction"
       time={new Date(2018, 6, 20)}
-      stat={{comment: 0, retweet: 27, like: 3, message: 4}}>
+      stat={{comment: 0, retweet: 27, like: 3, message: 4}}
+    >
       Variable web fonts are coming, and will open a world of opportunities for weight
       use online
     </Tweet>
