@@ -5,6 +5,7 @@ const Wrapper = styled.div `
   margin-bottom: 20px;
   background-color: white;
   padding: 20px;
+
 `;
 
 const Header = styled.div `

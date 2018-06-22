@@ -12,7 +12,8 @@ const Wrapper = styled.div `
   position: absolute;
   right: 0;
   top: 0;
-  width: 300px;
+  width: 290px;
+
 `;
 
 const LinksBlock = () => (

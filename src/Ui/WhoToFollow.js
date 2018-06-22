@@ -7,20 +7,33 @@ import Margin from './Margin';
 const Wraper = styled.div `
   display:flex;
   align-items: stretch;
+  padding: 10px 0;
+  border-bottom: 1px solid #E6ECF0;
+
 `;
 
 const Header = styled.div `
   display: flex;
   padding: 10px 0;
+  
 `;
 
-const Name = styled.div `
+const NameBlock = styled.div `
   font-weight: bold;
+  flex: 1 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
-const Username = styled.div `
+const UsernameBlock = styled.div `
   color: #718290;
   font-weight: 100;
+  flex: 1 0 0;
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const WhoToFollow = ({img, name, username}) => (
@@ -30,12 +43,12 @@ const WhoToFollow = ({img, name, username}) => (
     </Margin>
     <Margin>
       <Header>
-        <Name>{name}</Name>
-        <Username>@{username}</Username>
+        <NameBlock>{name}</NameBlock>
+        <UsernameBlock>@{username}</UsernameBlock>
       </Header>
       <Button>Follow</Button>
     </Margin>
-</Wraper>
+  </Wraper>
 );
 
 export default WhoToFollow;
