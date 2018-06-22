@@ -4,23 +4,20 @@ import styled from 'styled-components';
 import Button from './Button';
 import Margin from './Margin';
 
-const Wraper = styled.div `
+const Wrapper = styled.div `
   display:flex;
-  align-items: stretch;
   padding: 10px 0;
   border-bottom: 1px solid #E6ECF0;
-
+  box-sizing: border-box;
 `;
 
 const Header = styled.div `
   display: flex;
   padding: 10px 0;
-  
 `;
 
 const NameBlock = styled.div `
   font-weight: bold;
-  flex: 1 0 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -36,19 +33,23 @@ const UsernameBlock = styled.div `
   text-overflow: ellipsis;
 `;
 
+const FollowBlock = styled.div `
+  overflow: hidden;
+`;
+
 const WhoToFollow = ({img, name, username}) => (
-  <Wraper>
+  <Wrapper>
     <Margin>    
       <img src={img} alt="" height="48px"/>
     </Margin>
-    <Margin>
+    <FollowBlock>
       <Header>
         <NameBlock>{name}</NameBlock>
         <UsernameBlock>@{username}</UsernameBlock>
       </Header>
       <Button>Follow</Button>
-    </Margin>
-  </Wraper>
+    </FollowBlock>
+  </Wrapper>
 );
 
 export default WhoToFollow;

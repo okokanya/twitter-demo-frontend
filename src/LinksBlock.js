@@ -21,7 +21,7 @@ const LinksBlock = () => (
     <RightSideBlock title="Who to follow">
       <WhoToFollow img={re1} name="AppleInsider" username="appleinsider"/>
       <WhoToFollow img={re2} name="Creode" username="Creode"/>
-      <WhoToFollow img={re3} name="Epiphany Search" username="Epiphany"/>
+      <WhoToFollow img={re3} name="Epiphany Search" username="Epiphanyфываф"/>
 
 
     </RightSideBlock>
