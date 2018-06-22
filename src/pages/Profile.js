@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 import Feed from '../Feed/Feed';
 import ProfileDescription from '../ProfileDescription';
+import LinksBlock from '../LinksBlock';
 import Container from '../Ui/Container';
 import Button from '../Ui/Button';
 import Stat from '../Ui/Stat';
 import {More} from '../Ui/Icon';
+
 
 import headerImg from '../img/headerImg.png';
 
@@ -70,6 +72,7 @@ const Profile = () => (
         <Container small>
           <Feed/>
         </Container>
+        <LinksBlock />
       </Container>
     </Content>
   </div>
