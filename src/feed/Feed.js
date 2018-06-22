@@ -47,8 +47,8 @@ const Feed = () => (
       name="Every Interaction"
       time={new Date(2018, 6, 20)}
       stat={{comment: 10, retweet: 2, like: 3, message: 4}}>
-      We’ve made some more resources for all you wonderful #design folk
-      everyinteraction.com/resources/ #webdesign #UI <img src={resources} />
+      We’ve made some more resources for all you wonderful #design folk 
+      <a href="everyinteraction.com/resources/">everyinteraction.com/resources/</a> #webdesign #UI <img src={resources} />
     </Tweet>
     <Tweet
       avatar={avatar}
