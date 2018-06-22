@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import RightSideBlock from './Ui/RightSideBlock';
 import WhoToFollow from './Ui/WhoToFollow';
+import Trend from './Ui/Trend';
 
 import re1 from './img/re1.png';
 import re2 from './img/re2.png';
@@ -26,7 +27,8 @@ const LinksBlock = () => (
 
     </RightSideBlock>
     <RightSideBlock title="United Kingdom Trends">
-      <h1>Хэлоу</h1>
+      <Trend link="">
+      </Trend>
     </RightSideBlock>
   </Wrapper>
 );
