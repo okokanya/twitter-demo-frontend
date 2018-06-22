@@ -25,7 +25,11 @@ const HeaderLink = styled.div `
   font-weight: 200;
   color: #6E7683;
   display: flex;
-  align-items: center;  
+  align-items: center;
+
+  svg {
+    margin-right: 5px;
+  }
 `;
 const RightSideBlock = ({title, children, links}) => (
   <Wrapper>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Comment, Retweet, Likes, Envelope} from '../Ui/Icon';
+import {Comment, Retweet, Likes, LikesRed, Envelope} from '../Ui/Icon';
 import { distanceInWords } from 'date-fns';
 
 
@@ -49,7 +49,7 @@ const Icon = styled.span `
   font-size: 14px;
   line-height: 16px;
   margin-left: 4px;
-  color: #667580;
+  color: ${prop => prop.active ? '#E32B51' : '#667580' };
   font-weight:600
 
   svg {
@@ -76,7 +76,7 @@ const Tweet = ({
       <Icons>
         <Icon><Comment/>{stat.comment || ''}</Icon>
         <Icon><Retweet/>{stat.retweet || ''}</Icon>
-        <Icon><Likes/>{stat.like || ''}</Icon>
+        <Icon active={stat.liked}><Likes active={stat.liked} />{stat.like || ''}</Icon>
         <Icon><Envelope/>{stat.message || ''}</Icon>
       </Icons>
     </Body>
