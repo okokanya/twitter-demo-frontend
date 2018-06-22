@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FormattedNumber } from 'react-intl'
 
 const Wrapper = styled.div `
   margin-bottom: 20px;
@@ -18,7 +19,7 @@ const Header = styled.a `
 const Trend = ({ title, count, link, children}) => (
   <Wrapper>
     <Header href={link}>{title}</Header>
-    {count && `${count} Tweets`}
+    {count && <span><FormattedNumber value={count} /> Tweets</span>}
     {children}
   </Wrapper>
 );
