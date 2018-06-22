@@ -3,12 +3,14 @@ import styled from 'styled-components';
 
 import Button from './Button';
 import Margin from './Margin';
+import {Delete} from './Icon'
 
 const Wrapper = styled.div `
   display:flex;
   padding: 10px 0;
   border-bottom: 1px solid #E6ECF0;
   box-sizing: border-box;
+  position: relative;
 `;
 
 const Header = styled.div `
@@ -37,9 +39,16 @@ const FollowBlock = styled.div `
   overflow: hidden;
 `;
 
+const DeleteStyling = styled.div `
+cursor: pointer;
+position: absolute;
+top: 0;
+right: 0;
+`
+
 const WhoToFollow = ({img, name, username}) => (
   <Wrapper>
-    <Margin>    
+    <Margin>
       <img src={img} alt="" height="48px"/>
     </Margin>
     <FollowBlock>
@@ -49,6 +58,9 @@ const WhoToFollow = ({img, name, username}) => (
       </Header>
       <Button>Follow</Button>
     </FollowBlock>
+    <DeleteStyling>
+      <Delete/>
+    </DeleteStyling>
   </Wrapper>
 );
 
