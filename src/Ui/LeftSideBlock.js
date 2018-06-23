@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { color } from './Colors';
+
 
 const Wrapper = styled.div `
   margin-bottom: 20px;
 `;
 
 const Header = styled.div `
-  color: #1DA1F2;
+  color:${color.blue};
   font-weight: 100;
   display: flex;
   align-items: center;

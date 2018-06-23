@@ -14,3 +14,8 @@ a {
   color: #2AA3EF;
   text-decoration: none;
 }
+
+:root{
+  --primary-color: #B1D7DC;
+  --accent-color: #FF3F90;
+}

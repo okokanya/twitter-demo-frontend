@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FormattedNumber } from 'react-intl'
+import { FormattedNumber } from 'react-intl';
+import index from '../index.css';
 
 const Wrapper = styled.div `
   margin-bottom: 20px;
@@ -10,7 +11,7 @@ const Wrapper = styled.div `
 
 const Header = styled.a `
   display: block;
-  color: #2AA3EF;
+  /* color: --blue; */
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
