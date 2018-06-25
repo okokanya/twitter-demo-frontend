@@ -1,23 +1,14 @@
 import styled from 'styled-components';
-import { color } from './Colors';
+import { colors } from './Colors';
 
-
-const Button = styled.button `
+const Button = styled.button`
   padding: 0 20px;
   border-radius: 20px;
-  display: ${props => props.block
-    ? 'block'
-    : 'inline'};
-  background-color: ${props => props.blue
-    ? color.blue
-    : 'white'};
-  color: ${props => props.blue
-    ? "white"
-    : "color.blue"};
-  flex-grow: ${props => props.block
-    ? '1'
-    : 'none'};
-  border-color: ${color.blue};
+  display: ${props => (props.block ? 'block' : 'inline')};
+  background-color: ${props => (props.blue ? colors.blue : 'white')};
+  color: ${props => (props.blue ? 'white' : 'color.blue')};
+  flex-grow: ${props => (props.block ? '1' : 'none')};
+  border-color: ${colors.blue};
   border-width: 2px;
   cursor: pointer;
   font-size: 14px;

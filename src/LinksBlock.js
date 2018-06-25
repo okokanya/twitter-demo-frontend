@@ -22,11 +22,11 @@ const Footer = styled.div`
   font-size: 12px;
   color: #72828f;
   line-height: 20px;
+`;
 
-  a {
-    color: #72828f;
-    white-space: nowrap;
-  }
+const FooterLink = styled.a`
+  color: #72828f;
+  white-space: nowrap;
 `;
 
 const BlockFooter = styled.div`
@@ -65,9 +65,12 @@ const LinksBlock = () => (
       <Trend title="Joe Budden" link="#" count={1036} />
     </RightSideBlock>
     <Footer>
-      @2018 Twitter <a href="#">About</a> <a href="#">Help Center</a>{' '}
-      <a href="#">Terms</a> <a href="#">Privacy policy</a>{' '}
-      <a href="#">Cookies</a> <a href="#">Ads info</a>
+      @2018 Twitter <FooterLink href="#">About</FooterLink>{' '}
+      <FooterLink href="#">Help Center</FooterLink>{' '}
+      <FooterLink href="#">Terms</FooterLink>{' '}
+      <FooterLink href="#">Privacy policy</FooterLink>{' '}
+      <FooterLink href="#">Cookies</FooterLink>{' '}
+      <FooterLink href="#">Ads info</FooterLink>
     </Footer>
   </Wrapper>
 );

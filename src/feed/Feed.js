@@ -8,7 +8,7 @@ import avatar from '../img/avatar.png';
 import ill from '../img/ill.png';
 
 import resources from '../img/resources.png';
-import { color } from '../Ui/Colors';
+import { colors } from '../Ui/Colors';
 
 const FeedContainer = styled.section`
   height: auto;
@@ -26,7 +26,7 @@ const FeedTabs = styled.div`
 const FeedTab = styled.div`
   font-size: 20px;
   font-weight: bold;
-  color: ${props => (props.active ? 'black' : color.blue)};
+  color: ${props => (props.active ? 'black' : colors.blue)};
   margin-right: 20px;
   cursor: pointer;
 

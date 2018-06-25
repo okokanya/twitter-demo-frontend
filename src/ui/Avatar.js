@@ -8,8 +8,16 @@ const Avatar = styled.div`
   background-size: contain;
   background-repeat: none;
   border-radius: 50%;
-  height: ${props => (props.big ? '200px' : props.middle ? '80px' : '30px')};
-  width: ${props => (props.big ? '200px' : props.middle ? '80px' : '30px')};
+  height: ${props => {
+    if (props.big) return '200px';
+    if (props.middle) return '80px';
+    return '30px';
+  }};
+  width: ${props => {
+    if (props.big) return '200px';
+    if (props.middle) return '80px';
+    return '30px';
+  }};
   box-shadow: ${props =>
     props.big ? '2px 0px 30px -8px rgba(0,0,0,0.75)' : 'none'};
   border: ${props => (props.big ? '8px solid white' : 'none')};
