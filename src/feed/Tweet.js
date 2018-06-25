@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Comment, Retweet, Likes, LikesRed, Envelope } from '../Ui/Icon';
+import { Comment, Retweet, Likes, Envelope } from '../Ui/Icon';
 import { distanceInWords } from 'date-fns';
 
 const Container = styled.div`
@@ -53,7 +53,8 @@ const Icon = styled.span`
   line-height: 16px;
   margin-left: 4px;
   color: ${prop => (prop.active ? '#E32B51' : '#667580')};
-  font-weight:600 svg {
+  font-weight: 600;
+  svg {
     margin-right: 5px;
     vertical-align: middle;
   }

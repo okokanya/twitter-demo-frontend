@@ -6,7 +6,7 @@ const Button = styled.button`
   border-radius: 20px;
   display: ${props => (props.block ? 'block' : 'inline')};
   background-color: ${props => (props.blue ? colors.blue : 'white')};
-  color: ${props => (props.blue ? 'white' : 'color.blue')};
+  color: ${props => (props.blue ? 'white' : colors.blue)};
   flex-grow: ${props => (props.block ? '1' : 'none')};
   border-color: ${colors.blue};
   border-width: 2px;

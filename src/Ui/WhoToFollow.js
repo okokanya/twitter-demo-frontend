@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Button from './Button';
-import Margin from './Margin';
 import { Delete } from './Icon';
 
 const Wrapper = styled.div`
@@ -44,6 +43,10 @@ const DeleteStyling = styled.div`
   position: absolute;
   top: 0;
   right: 0;
+`;
+
+const Margin = styled.div`
+  margin-right: 5px;
 `;
 
 const WhoToFollow = ({ img, name, username }) => (
