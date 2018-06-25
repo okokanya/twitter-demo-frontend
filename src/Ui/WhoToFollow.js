@@ -3,29 +3,29 @@ import styled from 'styled-components';
 
 import Button from './Button';
 import Margin from './Margin';
-import {Delete} from './Icon'
+import { Delete } from './Icon';
 
-const Wrapper = styled.div `
-  display:flex;
+const Wrapper = styled.div`
+  display: flex;
   padding: 10px 0;
-  border-bottom: 1px solid #E6ECF0;
+  border-bottom: 1px solid #e6ecf0;
   box-sizing: border-box;
   position: relative;
 `;
 
-const Header = styled.div `
+const Header = styled.div`
   display: flex;
   padding: 10px 0;
 `;
 
-const NameBlock = styled.div `
+const NameBlock = styled.div`
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
 
-const UsernameBlock = styled.div `
+const UsernameBlock = styled.div`
   color: #718290;
   font-weight: 100;
   flex: 1 0 0;
@@ -35,21 +35,21 @@ const UsernameBlock = styled.div `
   text-overflow: ellipsis;
 `;
 
-const FollowBlock = styled.div `
+const FollowBlock = styled.div`
   overflow: hidden;
 `;
 
-const DeleteStyling = styled.div `
-cursor: pointer;
-position: absolute;
-top: 0;
-right: 0;
-`
+const DeleteStyling = styled.div`
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+`;
 
-const WhoToFollow = ({img, name, username}) => (
+const WhoToFollow = ({ img, name, username }) => (
   <Wrapper>
     <Margin>
-      <img src={img} alt="" height="48px"/>
+      <img src={img} alt="" height="48px" />
     </Margin>
     <FollowBlock>
       <Header>
@@ -59,7 +59,7 @@ const WhoToFollow = ({img, name, username}) => (
       <Button>Follow</Button>
     </FollowBlock>
     <DeleteStyling>
-      <Delete/>
+      <Delete />
     </DeleteStyling>
   </Wrapper>
 );

@@ -2,14 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Dot } from './Icon';
 
-const Wrapper = styled.div `
+const Wrapper = styled.div`
   margin-bottom: 20px;
   background-color: white;
   padding: 20px;
-
 `;
 
-const Header = styled.div `
+const Header = styled.div`
   font-weight: 600;
   display: flex;
   justify-content: space-between;
@@ -18,22 +17,27 @@ const Header = styled.div `
   margin-bottom: 20px;
 `;
 
-const HeaderLink = styled.div `
+const HeaderLink = styled.div`
   font-size: 12px;
   margin-left: 5px;
   white-space: nowrap;
   font-weight: 200;
-  color: #6E7683;
+  color: #6e7683;
 
   svg {
     vertical-align: middle;
     padding-right: 5px;
   }
 `;
-const RightSideBlock = ({title, children, links}) => (
+const RightSideBlock = ({ title, children, links }) => (
   <Wrapper>
     <Header>
-      {title} {links.map(link => (<HeaderLink><Dot /> {link}</HeaderLink>))}
+      {title}{' '}
+      {links.map(link => (
+        <HeaderLink>
+          <Dot /> {link}
+        </HeaderLink>
+      ))}
     </Header>
     {children}
   </Wrapper>

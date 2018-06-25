@@ -7,23 +7,22 @@ import LinksBlock from '../LinksBlock';
 import Container from '../Ui/Container';
 import Button from '../Ui/Button';
 import Stat from '../Ui/Stat';
-import {More} from '../Ui/Icon';
-
+import { More } from '../Ui/Icon';
 
 import headerImg from '../img/headerImg.png';
 
-const Statistic = styled.div `
+const Statistic = styled.div`
   height: 60px;
   border-bottom: 2px solid #c5cdd2b0;
   background: white;
 `;
 
-const Content = styled.div `
-  background: #E6ECF0;
+const Content = styled.div`
+  background: #e6ecf0;
   padding-top: 8px;
 `;
 
-const HeaderImg = styled.div `
+const HeaderImg = styled.div`
   height: 380px;
   width: 100%;
   background-image: url(${headerImg});
@@ -32,45 +31,45 @@ const HeaderImg = styled.div `
   background-repeat: no-repeat;
 `;
 
-const RightBlock = styled.div `
+const RightBlock = styled.div`
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
   padding: 0 20px;
   display: flex;
-  align-items: center;  
+  align-items: center;
 `;
 
-const StatBlock = styled.div `
+const StatBlock = styled.div`
   display: flex;
 `;
 
 const Profile = () => (
   <div>
-    <HeaderImg/>
+    <HeaderImg />
     <Statistic>
       <Container>
         <Container small>
           <StatBlock>
-            <Stat number={8058} title="Tweets" active/>
-            <Stat number={721} title="Following"/>
-            <Stat number={1815} title="Followers"/>
-            <Stat number={460} title="Likes"/>
-            <Stat number={2} title="Lists"/>
+            <Stat number={8058} title="Tweets" active />
+            <Stat number={721} title="Following" />
+            <Stat number={1815} title="Followers" />
+            <Stat number={460} title="Likes" />
+            <Stat number={2} title="Lists" />
           </StatBlock>
         </Container>
         <RightBlock>
           <Button>Follow</Button>
-          <More/>
+          <More />
         </RightBlock>
       </Container>
     </Statistic>
     <Content>
       <Container>
-        <ProfileDescription/>
+        <ProfileDescription />
         <Container small>
-          <Feed/>
+          <Feed />
         </Container>
         <LinksBlock />
       </Container>

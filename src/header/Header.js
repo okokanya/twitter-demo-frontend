@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Container from '../Ui/Container';
-import {Home, Moments, Notifications, Messages, TwitterIcon} from '../Ui/Icon';
+import {
+  Home,
+  Moments,
+  Notifications,
+  Messages,
+  TwitterIcon
+} from '../Ui/Icon';
 import Avatar from '../Ui/Avatar';
 import Button from '../Ui/Button';
 import SearchInput from '../Ui/SearchInput';
 
-const Nav = styled.div `
+const Nav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,16 +21,16 @@ const Nav = styled.div `
   position: relative;
 `;
 
-const NavBlock = styled.div `
+const NavBlock = styled.div`
   display: flex;
 `;
-const Margin = styled.div `
+const Margin = styled.div`
   margin: 0 10px;
-`
+`;
 
-const NavItem = styled.div `
+const NavItem = styled.div`
   display: flex;
-  color: #66757F;
+  color: #66757f;
   font-size: 13px;
   font-weight: 500;
   line-height: 20px;
@@ -32,17 +38,17 @@ const NavItem = styled.div `
   align-items: center;
   cursor: pointer;
   :hover {
-    opacity: .5;
+    opacity: 0.5;
   }
 `;
 
-const NavItemImg = styled.div `
+const NavItemImg = styled.div`
   margin-right: 5px;
   display: flex;
   align-items: center;
 `;
 
-const TwitterLogo = styled.div `
+const TwitterLogo = styled.div`
   position: absolute;
   width: 20px;
   height: 20px;
@@ -59,41 +65,49 @@ const Header = () => (
       <NavBlock>
         <Margin>
           <NavItem>
-            <NavItemImg><Home/></NavItemImg>Home
+            <NavItemImg>
+              <Home />
+            </NavItemImg>Home
           </NavItem>
         </Margin>
         <Margin>
           <NavItem>
-            <NavItemImg><Moments/></NavItemImg>
+            <NavItemImg>
+              <Moments />
+            </NavItemImg>
             <Margin>Moments</Margin>
           </NavItem>
         </Margin>
         <Margin>
           <NavItem>
-            <NavItemImg><Notifications/></NavItemImg>
+            <NavItemImg>
+              <Notifications />
+            </NavItemImg>
             <Margin>Notifications</Margin>
           </NavItem>
         </Margin>
         <Margin>
           <NavItem>
-            <NavItemImg><Messages/></NavItemImg>
+            <NavItemImg>
+              <Messages />
+            </NavItemImg>
             <Margin>Messages</Margin>
           </NavItem>
         </Margin>
       </NavBlock>
       <NavBlock>
         <Margin>
-          <SearchInput placeholder="Search Twitter"/>
+          <SearchInput placeholder="Search Twitter" />
         </Margin>
         <Margin>
-          <Avatar small/>
+          <Avatar small />
         </Margin>
         <Margin>
           <Button blue>Tweet</Button>
         </Margin>
       </NavBlock>
       <TwitterLogo>
-        <TwitterIcon/>
+        <TwitterIcon />
       </TwitterLogo>
     </Nav>
   </Container>

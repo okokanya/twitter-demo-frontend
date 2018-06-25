@@ -7,28 +7,26 @@ import Embed from '../Ui/Embed';
 import avatar from '../img/avatar.png';
 import ill from '../img/ill.png';
 
-import resources from '../img/resources.png'
-import { color } from '../Ui/Colors'
+import resources from '../img/resources.png';
+import { color } from '../Ui/Colors';
 
-const FeedContainer = styled.section `
+const FeedContainer = styled.section`
   height: auto;
   background-color: white;
   border-bottom: 2px solid #e1e8ed;
 `;
 
-const FeedTabs = styled.div `
+const FeedTabs = styled.div`
   display: flex;
   padding: 20px;
   align-items: center;
   border-bottom: 1px solid #e6ecf0;
 `;
 
-const FeedTab = styled.div `
+const FeedTab = styled.div`
   font-size: 20px;
   font-weight: bold;
-  color: ${props => (props.active
-  ? 'black'
-  : color.blue)};
+  color: ${props => (props.active ? 'black' : color.blue)};
   margin-right: 20px;
   cursor: pointer;
 
@@ -49,18 +47,21 @@ const Feed = () => (
       username="EveryInteract"
       name="Every Interaction"
       time={new Date(2018, 6, 20)}
-      stat={{comment: 10, retweet: 2, like: 3, message: 4, liked: true }}
+      stat={{ comment: 10, retweet: 2, like: 3, message: 4, liked: true }}
       big
     >
-      We’ve made some more resources for all you wonderful #design folk 
-      <a href="everyinteraction.com/resources/">everyinteraction.com/resources/</a> #webdesign #UI <img src={resources} />
+      We’ve made some more resources for all you wonderful #design folk
+      <a href="everyinteraction.com/resources/">
+        everyinteraction.com/resources/
+      </a>{' '}
+      #webdesign #UI <img src={resources} />
     </Tweet>
     <Tweet
       avatar={avatar}
       username="EveryInteract"
       name="Every Interaction"
       time={new Date(2018, 6, 20)}
-      stat={{comment: 0, retweet: 62, like: 30, message: 4}}
+      stat={{ comment: 0, retweet: 62, like: 30, message: 4 }}
       big
     >
       Our new website concept; Taking you from… @ Every Interaction
@@ -71,15 +72,18 @@ const Feed = () => (
       username="EveryInteract"
       name="Every Interaction"
       time={new Date(2018, 6, 20)}
-      stat={{comment: 0, retweet: 27, like: 3, message: 4}}
+      stat={{ comment: 0, retweet: 27, like: 3, message: 4 }}
     >
-      Variable web fonts are coming, and will open a world of opportunities for weight
-      use online
-      <Embed img={ill} title="The Future of Web Fonts" text="We love typefaces. They give our sites and applications personalized feel. They convey the information and tell a story. They establish information hierarchy. But they’re…" link="vilijamis.com" linkUrl="http://vilijamis.com/" >
-
-      </Embed>
+      Variable web fonts are coming, and will open a world of opportunities for
+      weight use online
+      <Embed
+        img={ill}
+        title="The Future of Web Fonts"
+        text="We love typefaces. They give our sites and applications personalized feel. They convey the information and tell a story. They establish information hierarchy. But they’re…"
+        link="vilijamis.com"
+        linkUrl="http://vilijamis.com/"
+      />
     </Tweet>
-
   </FeedContainer>
 );
 

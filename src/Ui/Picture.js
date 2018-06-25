@@ -1,12 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div `
+const Wrapper = styled.div`
   border: 4px solid transparent;
-  height: ${props => props.small ? '50px' : '80px'};
-  width: ${props => props.small ? '50px' : '80px'
-  };
-  border-radius: ${props => props.small ? 0 : '6px'};
+  height: ${props => (props.small ? '50px' : '80px')};
+  width: ${props => (props.small ? '50px' : '80px')};
+  border-radius: ${props => (props.small ? 0 : '6px')};
   position: relative;
 `;
 

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { color } from './Colors';
 
-
 const Wrapper = styled.div `
   margin-bottom: 20px;
 `;
