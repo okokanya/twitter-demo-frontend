@@ -2,15 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import RightSideBlock from './Ui/RightSideBlock';
-import WhoToFollow from './Ui/WhoToFollow';
+import { followersSuggest } from './data';
 import Trend from './Ui/Trend';
+import WhoToFollow from './Ui/WhoToFollow';
+
 import { trends } from './data';
-
 import { People } from './Ui/Icon';
-
-import re1 from './img/re1.png';
-import re2 from './img/re2.png';
-import re3 from './img/re3.png';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -48,9 +45,14 @@ const trendsLinks = [<a href="#">Change</a>];
 const LinksBlock = () => (
   <Wrapper>
     <RightSideBlock title="Who to follow" links={whoToFollowLinks}>
-      <WhoToFollow img={re1} name="AppleInsider" username="appleinsider" />
-      <WhoToFollow img={re2} name="Creode" username="Creode" />
-      <WhoToFollow img={re3} name="Epiphany Search" username="Epiphan" />
+      {followersSuggest.map(followersSuggest => (
+        <WhoToFollow
+          img={followersSuggest.img}
+          name={followersSuggest.name}
+          username={followersSuggest.username}
+        />
+      ))}
+
       <BlockFooter>
         <a href="#">
           <People /> Find people you know
@@ -65,6 +67,7 @@ const LinksBlock = () => (
         </Trend>
       ))}
     </RightSideBlock>
+
     <Footer>
       @2018 Twitter <FooterLink href="#">About</FooterLink>{' '}
       <FooterLink href="#">Help Center</FooterLink>{' '}

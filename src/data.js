@@ -1,6 +1,9 @@
 import avatar from './img/avatar.png';
 import resources from './img/resources.png';
 import ill from './img/ill.png';
+import re1 from './img/re1.png';
+import re2 from './img/re2.png';
+import re3 from './img/re3.png';
 
 export const tweets = [
   {
@@ -49,14 +52,12 @@ export const trends = [
   {
     title: '#BringYourDogToWorkDay',
     link: '',
-    count: 234,
-    text: ''
+    count: 234
   },
   {
     title: '#FridayFeeling',
     link: '#',
-    count: 12123,
-    text: ''
+    count: 12123
   },
   {
     title: '#BrexitAnniversary',
@@ -67,7 +68,24 @@ export const trends = [
   {
     title: '#Joe Budden',
     link: '#',
-    count: 1036,
-    text: ''
+    count: 1036
+  }
+];
+
+export const followersSuggest = [
+  {
+    img: re1,
+    name: 'AppleInsider',
+    username: 'appleinsider'
+  },
+  {
+    img: re2,
+    name: 'Creode',
+    username: 'Creode'
+  },
+  {
+    img: re3,
+    name: 'Epiphany Search',
+    username: 'Epiphan'
   }
 ];
