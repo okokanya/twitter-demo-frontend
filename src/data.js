@@ -4,7 +4,12 @@ import ill from './img/ill.png';
 import re1 from './img/re1.png';
 import re2 from './img/re2.png';
 import re3 from './img/re3.png';
-
+import Avatar1 from './img/Avatar1.png';
+import Avatar2 from './img/Avatar2.png';
+import Avatar3 from './img/Avatar3.png';
+import Avatar4 from './img/Avatar4.png';
+import Avatar5 from './img/Avatar5.png';
+import Avatar6 from './img/Avatar6.png';
 export const tweets = [
   {
     avatar: avatar,
@@ -87,5 +92,32 @@ export const followersSuggest = [
     img: re3,
     name: 'Epiphany Search',
     username: 'Epiphan'
+  }
+];
+
+export const followersYouKnow = [
+  {
+    img: Avatar1,
+    link: '#'
+  },
+  {
+    img: Avatar2,
+    link: '#'
+  },
+  {
+    img: Avatar3,
+    link: '#'
+  },
+  {
+    img: Avatar4,
+    link: '#'
+  },
+  {
+    img: Avatar5,
+    link: '#'
+  },
+  {
+    img: Avatar6,
+    link: '#'
   }
 ];

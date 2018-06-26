@@ -7,7 +7,6 @@ import Button from './Ui/Button';
 import { Location, LinkIcon, Joined, Followers, Photo } from './Ui/Icon';
 import LeftSideBlock from './Ui/LeftSideBlock';
 import Picture from './Ui/Picture';
-
 import Avatar1 from './img/Avatar1.png';
 import Avatar2 from './img/Avatar2.png';
 import Avatar3 from './img/Avatar3.png';
@@ -21,6 +20,7 @@ import Photos3 from './img/Photos3.png';
 import Photos4 from './img/Photos4.png';
 import Photos5 from './img/Photos5.png';
 import Photos6 from './img/Photos6.png';
+import { followersYouKnow } from './data';
 
 const Container = styled.div`
   position: absolute;
@@ -112,13 +112,12 @@ const ProfileDescription = () => (
         Message
       </Button>
     </Buttons>
+
     <LeftSideBlock icon={Followers} count={6} title="Followers you know">
-      <Picture small src={Avatar1} />
-      <Picture small src={Avatar2} />
-      <Picture small src={Avatar3} />
-      <Picture small src={Avatar4} />
-      <Picture small src={Avatar5} />
-      <Picture small src={Avatar6} />
+      {followersYouKnow.map(willyou => (
+        <Picture small src={willyou.img} link={willyou.link} />
+      ))}
+
     </LeftSideBlock>
 
     <LeftSideBlock icon={Photo} count={522} title="Photos and videos">
