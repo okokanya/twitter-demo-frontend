@@ -4,11 +4,9 @@ import styled from 'styled-components';
 import Tweet from './Tweet';
 import Embed from '../Ui/Embed';
 
-import avatar from '../img/avatar.png';
-import ill from '../img/ill.png';
-
-import resources from '../img/resources.png';
 import { colors } from '../Ui/Colors';
+
+import { tweets } from '../data';
 
 const FeedContainer = styled.section`
   height: auto;
@@ -42,48 +40,28 @@ const Feed = () => (
       <FeedTab>Tweets & replies</FeedTab>
       <FeedTab>Media</FeedTab>
     </FeedTabs>
-    <Tweet
-      avatar={avatar}
-      username="EveryInteract"
-      name="Every Interaction"
-      time={new Date(2018, 6, 20)}
-      stat={{ comment: 10, retweet: 2, like: 3, message: 4, liked: true }}
-      big
-    >
-      We’ve made some more resources for all you wonderful #design folk
-      <a href="everyinteraction.com/resources/">
-        everyinteraction.com/resources/
-      </a>{' '}
-      #webdesign #UI <img src={resources} />
-    </Tweet>
-    <Tweet
-      avatar={avatar}
-      username="EveryInteract"
-      name="Every Interaction"
-      time={new Date(2018, 6, 20)}
-      stat={{ comment: 0, retweet: 62, like: 30, message: 4 }}
-      big
-    >
-      Our new website concept; Taking you from… @ Every Interaction
-      instagram.com/p/BNFGrfhBP3M/
-    </Tweet>
-    <Tweet
-      avatar={avatar}
-      username="EveryInteract"
-      name="Every Interaction"
-      time={new Date(2018, 6, 20)}
-      stat={{ comment: 0, retweet: 27, like: 3, message: 4 }}
-    >
-      Variable web fonts are coming, and will open a world of opportunities for
-      weight use online
-      <Embed
-        img={ill}
-        title="The Future of Web Fonts"
-        text="We love typefaces. They give our sites and applications personalized feel. They convey the information and tell a story. They establish information hierarchy. But they’re…"
-        link="vilijamis.com"
-        linkUrl="http://vilijamis.com/"
-      />
-    </Tweet>
+    {tweets.map(tweet => (
+      <Tweet
+        avatar={tweet.avatar}
+        username={tweet.username}
+        name={tweet.name}
+        time={tweet.time}
+        stat={tweet.stat}
+        big={tweet.textSize === 'big'}
+      >
+        <div dangerouslySetInnerHTML={{ __html: tweet.html }} />
+        {tweet.image && <img src={tweet.image} alt="tweet" />}
+        {tweet.embed && (
+          <Embed
+            img={tweet.embed.img}
+            title={tweet.embed.title}
+            text={tweet.embed.text}
+            link={tweet.embed.link}
+            linkUrl={tweet.embed.linkUrl}
+          />
+        )}
+      </Tweet>
+    ))}
   </FeedContainer>
 );
 

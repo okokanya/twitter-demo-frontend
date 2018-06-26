@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import RightSideBlock from './Ui/RightSideBlock';
 import WhoToFollow from './Ui/WhoToFollow';
 import Trend from './Ui/Trend';
+import { trends } from './data';
 
 import { People } from './Ui/Icon';
 
@@ -56,13 +57,13 @@ const LinksBlock = () => (
         </a>
       </BlockFooter>
     </RightSideBlock>
+
     <RightSideBlock title="United Kingdom Trends" links={trendsLinks}>
-      <Trend title="#BrongYourDogToWorkDay" link="#" count={234} />
-      <Trend title="#FridayFeeling" link="#" count={12123} />
-      <Trend title="#BrexitAnniversary" link="#">
-        It's one year since the UK voted to leave the European Union
-      </Trend>
-      <Trend title="Joe Budden" link="#" count={1036} />
+      {trends.map(trend => (
+        <Trend title={trend.title} count={trend.count} link={trend.link}>
+          {trend.text}
+        </Trend>
+      ))}
     </RightSideBlock>
     <Footer>
       @2018 Twitter <FooterLink href="#">About</FooterLink>{' '}

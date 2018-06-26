@@ -8,7 +8,6 @@ import './App.css';
 
 const Body = styled.div`
   min-width: 1200px;
-  // background-color: #e6ecf0;
   background-color: white;
   margin: auto;
   margin: 0;
