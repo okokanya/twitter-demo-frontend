@@ -7,20 +7,8 @@ import Button from './Ui/Button';
 import { Location, LinkIcon, Joined, Followers, Photo } from './Ui/Icon';
 import LeftSideBlock from './Ui/LeftSideBlock';
 import Picture from './Ui/Picture';
-import Avatar1 from './img/Avatar1.png';
-import Avatar2 from './img/Avatar2.png';
-import Avatar3 from './img/Avatar3.png';
-import Avatar4 from './img/Avatar4.png';
-import Avatar5 from './img/Avatar5.png';
-import Avatar6 from './img/Avatar6.png';
 
-import Photos1 from './img/Photos1.png';
-import Photos2 from './img/Photos2.png';
-import Photos3 from './img/Photos3.png';
-import Photos4 from './img/Photos4.png';
-import Photos5 from './img/Photos5.png';
-import Photos6 from './img/Photos6.png';
-import { followersYouKnow } from './data';
+import { followersYouKnow, photosVideos } from './data';
 
 const Container = styled.div`
   position: absolute;
@@ -114,19 +102,13 @@ const ProfileDescription = () => (
     </Buttons>
 
     <LeftSideBlock icon={Followers} count={6} title="Followers you know">
-      {followersYouKnow.map(willyou => (
-        <Picture small src={willyou.img} link={willyou.link} />
+      {followersYouKnow.map(pick => (
+        <Picture small src={pick.img} link={pick.link} />
       ))}
-
     </LeftSideBlock>
 
     <LeftSideBlock icon={Photo} count={522} title="Photos and videos">
-      <Picture src={Photos1} />
-      <Picture src={Photos2} />
-      <Picture src={Photos3} />
-      <Picture src={Photos4} />
-      <Picture src={Photos5} />
-      <Picture src={Photos6} />
+      {photosVideos.map(pick => <Picture src={pick.img} link={pick.link} />)}
     </LeftSideBlock>
   </Container>
 );

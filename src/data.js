@@ -10,6 +10,13 @@ import Avatar3 from './img/Avatar3.png';
 import Avatar4 from './img/Avatar4.png';
 import Avatar5 from './img/Avatar5.png';
 import Avatar6 from './img/Avatar6.png';
+import Photos1 from './img/Photos1.png';
+import Photos2 from './img/Photos2.png';
+import Photos3 from './img/Photos3.png';
+import Photos4 from './img/Photos4.png';
+import Photos5 from './img/Photos5.png';
+import Photos6 from './img/Photos6.png';
+
 export const tweets = [
   {
     avatar: avatar,
@@ -121,3 +128,29 @@ export const followersYouKnow = [
     link: '#'
   }
 ];
+export const photosVideos = [
+  {
+    img: Photos1,
+    link: '#'
+  },
+  {
+    img: Photos2,
+    link: '#'
+  },
+  {
+    img: Photos3,
+    link: '#'
+  },
+  {
+    img: Photos4,
+    link: '#'
+  },
+  {
+    img: Photos5,
+    link: '#'
+  },
+  {
+    img: Photos6,
+    link: '#'
+  }
+]
