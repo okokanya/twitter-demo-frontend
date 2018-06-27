@@ -5,7 +5,7 @@ import RightSideBlock from './Ui/RightSideBlock';
 import { followersSuggest } from './data';
 import Trend from './Ui/Trend';
 import WhoToFollow from './Ui/WhoToFollow';
-
+import { Link } from 'react-router-dom';
 import { trends } from './data';
 import { People } from './Ui/Icon';
 
@@ -46,11 +46,13 @@ const LinksBlock = () => (
   <Wrapper>
     <RightSideBlock title="Who to follow" links={whoToFollowLinks}>
       {followersSuggest.map(followersSuggest => (
-        <WhoToFollow
-          img={followersSuggest.img}
-          name={followersSuggest.name}
-          username={followersSuggest.username}
-        />
+        <Link to={`${followersSuggest.link}`}>
+          <WhoToFollow
+            img={followersSuggest.img}
+            name={followersSuggest.name}
+            username={followersSuggest.username}
+          />
+        </Link>
       ))}
 
       <BlockFooter>

@@ -88,17 +88,20 @@ export const followersSuggest = [
   {
     img: re1,
     name: 'AppleInsider',
-    username: 'appleinsider'
+    username: 'appleinsider',
+    link: '/AppleInsider'
   },
   {
     img: re2,
     name: 'Creode',
-    username: 'Creode'
+    username: 'Creode',
+    link: '/Creode'
   },
   {
     img: re3,
     name: 'Epiphany Search',
-    username: 'Epiphan'
+    username: 'Epiphan',
+    link: '/Epiphan'
   }
 ];
 
