@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Comment, Retweet, Likes, Envelope } from '../Ui/Icon';
 import { distanceInWords } from 'date-fns';
 
+import { Link } from 'react-router-dom';
+
 const Container = styled.div`
   border-bottom: 1px solid #e6ecf0;
   display: flex;
@@ -81,22 +83,30 @@ const Tweet = ({
       </Header>
       {children}
       <Icons>
-        <Icon>
-          <Comment />
-          {stat.comment || ''}
-        </Icon>
-        <Icon>
-          <Retweet />
-          {stat.retweet || ''}
-        </Icon>
-        <Icon active={stat.liked}>
-          <Likes active={stat.liked} />
-          {stat.like || ''}
-        </Icon>
-        <Icon>
-          <Envelope />
-          {stat.message || ''}
-        </Icon>
+        <Link to="/#EveryInteract/tweet/with_replies">
+          <Icon>
+            <Comment />
+            {stat.comment || ''}
+          </Icon>
+        </Link>
+        <Link to="/#EveryInteract/tweet/retweet">
+          <Icon>
+            <Retweet />
+            {stat.retweet || ''}
+          </Icon>
+        </Link>
+        <Link to="/#EveryInteract/tweet/likes">
+          <Icon active={stat.liked}>
+            <Likes active={stat.liked} />
+            {stat.like || ''}
+          </Icon>
+        </Link>
+        <Link to="/#EveryInteract/tweet/message">
+          <Icon>
+            <Envelope />
+            {stat.message || ''}
+          </Icon>
+        </Link>
       </Icons>
     </Body>
   </Container>

@@ -21,7 +21,12 @@ class App extends Component {
         <Body>
           <Header />
           <Switch>
-            <Route exact path="/EveryInteract" component={Profile} />
+            <Route exact path="/:user/with_replies" component={Profile} />
+            <Route exact path="/:user/media" component={Profile} />
+            <Route exact path="/:user/following" component={Profile} />
+            <Route exact path="/:user/followers" component={Profile} />
+            <Route exact path="/:user/likes" component={Profile} />
+            <Route exact path="/:user" component={Profile} />
             <Redirect to="/EveryInteract" />
           </Switch>
         </Body>

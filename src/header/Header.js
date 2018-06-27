@@ -12,6 +12,8 @@ import Avatar from '../Ui/Avatar';
 import Button from '../Ui/Button';
 import SearchInput from '../Ui/SearchInput';
 
+import { Link } from 'react-router-dom';
+
 const Nav = styled.div`
   display: flex;
   justify-content: space-between;
@@ -24,6 +26,7 @@ const Nav = styled.div`
 const NavBlock = styled.div`
   display: flex;
 `;
+
 const Margin = styled.div`
   margin: 0 10px;
 `;
@@ -67,7 +70,8 @@ const Header = () => (
           <NavItem>
             <NavItemImg>
               <Home />
-            </NavItemImg>Home
+            </NavItemImg>
+            <Link to="/">Home</Link>
           </NavItem>
         </Margin>
         <Margin>
@@ -75,7 +79,7 @@ const Header = () => (
             <NavItemImg>
               <Moments />
             </NavItemImg>
-            <Margin>Moments</Margin>
+            <Link to="/i/moments">Moments</Link>
           </NavItem>
         </Margin>
         <Margin>
@@ -83,7 +87,9 @@ const Header = () => (
             <NavItemImg>
               <Notifications />
             </NavItemImg>
-            <Margin>Notifications</Margin>
+            <Margin>
+              <Link to="/i/notifications">Notifications</Link>
+            </Margin>
           </NavItem>
         </Margin>
         <Margin>
@@ -91,7 +97,9 @@ const Header = () => (
             <NavItemImg>
               <Messages />
             </NavItemImg>
-            <Margin>Messages</Margin>
+            <Margin>
+              <Link to="/i/messages">Messages</Link>
+            </Margin>
           </NavItem>
         </Margin>
       </NavBlock>

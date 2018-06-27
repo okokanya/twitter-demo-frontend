@@ -10,6 +10,7 @@ import Stat from '../Ui/Stat';
 import { More } from '../Ui/Icon';
 
 import headerImg from '../img/headerImg.png';
+import { Link } from 'react-router-dom';
 
 const Statistic = styled.div`
   height: 60px;
@@ -44,19 +45,30 @@ const RightBlock = styled.div`
 const StatBlock = styled.div`
   display: flex;
 `;
-
-const Profile = () => (
+//Рутер теперь передает сюда проп match и в нем содержится юзернейм из урла
+//Можем его передать любому компоненту
+const Profile = ({ match }) => (
   <div>
     <HeaderImg />
     <Statistic>
       <Container>
         <Container small>
           <StatBlock>
-            <Stat number={8058} title="Tweets" active />
-            <Stat number={721} title="Following" />
-            <Stat number={1815} title="Followers" />
-            <Stat number={460} title="Likes" />
-            <Stat number={2} title="Lists" />
+            <Link to={`/${match.params.user}`}>
+              <Stat number={8058} title="Tweets" active />
+            </Link>
+            <Link to={`/${match.params.user}/following`}>
+              <Stat number={721} title="Following" />
+            </Link>
+            <Link to={`/${match.params.user}/followers`}>
+              <Stat number={1815} title="Followers" />
+            </Link>
+            <Link to={`/${match.params.user}/likes`}>
+              <Stat number={460} title="Likes" />
+            </Link>
+            <Link to={`/${match.params.user}/lists`}>
+              <Stat number={2} title="Lists" />
+            </Link>
           </StatBlock>
         </Container>
         <RightBlock>
@@ -67,9 +79,9 @@ const Profile = () => (
     </Statistic>
     <Content>
       <Container>
-        <ProfileDescription />
+        <ProfileDescription user={match.params.user} />
         <Container small>
-          <Feed />
+          <Feed user={match.params.user} />
         </Container>
         <LinksBlock />
       </Container>

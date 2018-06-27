@@ -5,8 +5,8 @@ import Tweet from './Tweet';
 import Embed from '../Ui/Embed';
 
 import { colors } from '../Ui/Colors';
-
 import { tweets } from '../data';
+import { Link } from 'react-router-dom';
 
 const FeedContainer = styled.section`
   height: auto;
@@ -33,12 +33,18 @@ const FeedTab = styled.div`
   }
 `;
 
-const Feed = () => (
+const Feed = ({ user }) => (
   <FeedContainer>
     <FeedTabs>
-      <FeedTab active>Tweets</FeedTab>
-      <FeedTab>Tweets & replies</FeedTab>
-      <FeedTab>Media</FeedTab>
+      <Link to={`/${user}/tweet`}>
+        <FeedTab active>Tweets</FeedTab>
+      </Link>
+      <Link to={`/${user}/with_replies`}>
+        <FeedTab>Tweets & replies</FeedTab>
+      </Link>
+      <Link to={`/${user}/media`}>
+        <FeedTab>Media</FeedTab>
+      </Link>
     </FeedTabs>
     {tweets.map(tweet => (
       <Tweet

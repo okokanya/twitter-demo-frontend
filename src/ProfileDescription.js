@@ -63,14 +63,14 @@ const Buttons = styled.div`
   margin-bottom: 20px;
 `;
 
-const ProfileDescription = () => (
+const ProfileDescription = ({ user }) => (
   <Container>
     <DescAvatar>
       <Avatar big />
     </DescAvatar>
     <Header>Every Interaction</Header>
     <Subheader>
-      @EveryInteract
+      @{user}
       <span>follows you</span>
     </Subheader>
     <Description>Some info here</Description>
