@@ -83,25 +83,25 @@ const Tweet = ({
       </Header>
       {children}
       <Icons>
-        <Link to="/#EveryInteract/tweet/with_replies">
+        <Link to={`/${username}/tweet/with_replies`}>
           <Icon>
             <Comment />
             {stat.comment || ''}
           </Icon>
         </Link>
-        <Link to="/#EveryInteract/tweet/retweet">
+        <Link to={`/${username}/tweet/retweet`}>
           <Icon>
             <Retweet />
             {stat.retweet || ''}
           </Icon>
         </Link>
-        <Link to="/#EveryInteract/tweet/likes">
+        <Link to={`/${username}/tweet/likes`}>
           <Icon active={stat.liked}>
             <Likes active={stat.liked} />
             {stat.like || ''}
           </Icon>
         </Link>
-        <Link to="/#EveryInteract/tweet/message">
+        <Link to={`/${username}/tweet/message`}>
           <Icon>
             <Envelope />
             {stat.message || ''}

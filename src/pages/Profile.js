@@ -45,8 +45,6 @@ const RightBlock = styled.div`
 const StatBlock = styled.div`
   display: flex;
 `;
-//Рутер теперь передает сюда проп match и в нем содержится юзернейм из урла
-//Можем его передать любому компоненту
 const Profile = ({ match }) => (
   <div>
     <HeaderImg />
