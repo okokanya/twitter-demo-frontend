@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
 
 import { trends } from '../data';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   margin-bottom: 20px;
@@ -26,7 +27,10 @@ const makeMeTheKey = input => {
 
 const Trend = ({ title, count, link, children }) => (
   <Wrapper>
-    <Header href={link}>{title}</Header>
+    <Header>
+      <Link to={`/trends/${link}`}>{title}</Link>
+    </Header>
+
     {count && <span>{makeMeTheKey(count)} Tweets</span>}
     {children}
   </Wrapper>

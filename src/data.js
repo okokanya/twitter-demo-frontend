@@ -63,23 +63,23 @@ export const tweets = [
 export const trends = [
   {
     title: '#BringYourDogToWorkDay',
-    link: '',
+    link: '#BringYourDogToWorkDay',
     count: 234
   },
   {
     title: '#FridayFeeling',
-    link: '#',
+    link: '#FridayFeeling',
     count: 12123
   },
   {
     title: '#BrexitAnniversary',
-    link: '#',
+    link: '#BrexitAnniversary',
     count: '',
     text: "It's one year since the UK voted to leave the European Union"
   },
   {
     title: '#Joe Budden',
-    link: '#',
+    link: '#Joe_Budden',
     count: 1036
   }
 ];
