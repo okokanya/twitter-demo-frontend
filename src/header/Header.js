@@ -25,13 +25,13 @@ const Nav = styled.div`
 
 const NavBlock = styled.div`
   display: flex;
-`;
-
-const Margin = styled.div`
-  margin: 0 10px;
+  div {
+    margin: 0 8px;
+  }
 `;
 
 const NavItem = styled.div`
+  margin-left: 16px;
   display: flex;
   color: #66757f;
   font-size: 13px;
@@ -66,53 +66,35 @@ const Header = () => (
   <Container>
     <Nav>
       <NavBlock>
-        <Margin>
-          <NavItem>
-            <NavItemImg>
-              <Home />
-            </NavItemImg>
-            <Link to="/">Home</Link>
-          </NavItem>
-        </Margin>
-        <Margin>
-          <NavItem>
-            <NavItemImg>
-              <Moments />
-            </NavItemImg>
-            <Link to="/i/moments">Moments</Link>
-          </NavItem>
-        </Margin>
-        <Margin>
-          <NavItem>
-            <NavItemImg>
-              <Notifications />
-            </NavItemImg>
-            <Margin>
-              <Link to="/i/notifications">Notifications</Link>
-            </Margin>
-          </NavItem>
-        </Margin>
-        <Margin>
-          <NavItem>
-            <NavItemImg>
-              <Messages />
-            </NavItemImg>
-            <Margin>
-              <Link to="/i/messages">Messages</Link>
-            </Margin>
-          </NavItem>
-        </Margin>
+        <NavItem>
+          <NavItemImg>
+            <Home />
+          </NavItemImg>
+          <Link to="/">Home</Link>
+        </NavItem>
+        <NavItem>
+          <NavItemImg>
+            <Moments />
+          </NavItemImg>
+          <Link to="/i/moments">Moments</Link>
+        </NavItem>
+        <NavItem>
+          <NavItemImg>
+            <Notifications />
+          </NavItemImg>
+          <Link to="/i/notifications">Notifications</Link>
+        </NavItem>
+        <NavItem>
+          <NavItemImg>
+            <Messages />
+          </NavItemImg>
+          <Link to="/i/messages">Messages</Link>
+        </NavItem>
       </NavBlock>
       <NavBlock>
-        <Margin>
-          <SearchInput placeholder="Search Twitter" />
-        </Margin>
-        <Margin>
-          <Avatar small />
-        </Margin>
-        <Margin>
-          <Button blue>Tweet</Button>
-        </Margin>
+        <SearchInput placeholder="Search Twitter" />
+        <Avatar small />
+        <Button blue>Tweet</Button>
       </NavBlock>
       <TwitterLogo>
         <TwitterIcon />
