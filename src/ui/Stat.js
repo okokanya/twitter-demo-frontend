@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
-const StatContainer = styled.div`
+const StatContainer = styled(NavLink)`
   padding: 0 10px;
-  border-bottom: 3px solid ${props => (props.active ? '#1da1f2' : 'white')};
+  border-bottom: 3px solid white;
   height: 60px;
   box-sizing: border-box;
   text-align: center;
@@ -14,6 +15,10 @@ const StatContainer = styled.div`
   margin-right: 20px;
 
   :hover {
+    border-bottom-color: #1da1f2;
+  }
+
+  &.active {
     border-bottom-color: #1da1f2;
   }
 `;
@@ -33,10 +38,10 @@ const StatNumber = styled.div`
   color: ${props => (props.active ? '#1da1f2' : '#66757F')};
 `;
 
-const Stat = ({ number, active, title }) => (
-  <StatContainer active={active}>
+const Stat = ({ number, title, to }) => (
+  <StatContainer exact to={to} activeClassName="active" >
     <StatTitle>{title}</StatTitle>
-    <StatNumber active={active}>{number}</StatNumber>
+    <StatNumber>{number}</StatNumber>
   </StatContainer>
 );
 

@@ -52,21 +52,11 @@ const Profile = ({ match }) => (
       <Container>
         <Container small>
           <StatBlock>
-            <Link to={`/${match.params.user}`}>
-              <Stat number={8058} title="Tweets" active />
-            </Link>
-            <Link to={`/${match.params.user}/following`}>
-              <Stat number={721} title="Following" />
-            </Link>
-            <Link to={`/${match.params.user}/followers`}>
-              <Stat number={1815} title="Followers" />
-            </Link>
-            <Link to={`/${match.params.user}/likes`}>
-              <Stat number={460} title="Likes" />
-            </Link>
-            <Link to={`/${match.params.user}/lists`}>
-              <Stat number={2} title="Lists" />
-            </Link>
+            <Stat number={8058} title="Tweets" to={`/${match.params.user}`} />
+            <Stat number={721} title="Following" to={`/${match.params.user}/following`} />
+            <Stat number={1815} title="Followers" to={`/${match.params.user}/followers`} />
+            <Stat number={460} title="Likes" to={`/${match.params.user}/likes`}/>
+            <Stat number={2} title="Lists" to={`/${match.params.user}/lists`} />
           </StatBlock>
         </Container>
         <RightBlock>

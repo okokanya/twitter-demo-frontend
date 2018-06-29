@@ -30,8 +30,6 @@ class App extends Component {
             <Route exact path="/:user/followers" component={Profile} />
             <Route exact path="/:user/likes" component={Profile} />
             <Route exact path="/:user" component={Profile} />
-
-
             <Redirect to="/EveryInteract" />
           </Switch>
         </Body>

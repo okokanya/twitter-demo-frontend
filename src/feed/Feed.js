@@ -6,7 +6,7 @@ import Embed from '../Ui/Embed';
 
 import { colors } from '../Ui/Colors';
 import { tweets } from '../data';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const FeedContainer = styled.section`
   height: auto;
@@ -33,18 +33,32 @@ const FeedTab = styled.div`
   }
 `;
 
+const StyledLink = styled(NavLink)`
+  font-size: 20px;
+  font-weight: bold;
+  color: ${colors.blue};
+  margin-right: 20px;
+  cursor: pointer;
+  :hover {
+    color: black;
+  }
+  &.active {
+    color: black;
+  }
+`;
+
 const Feed = ({ user }) => (
   <FeedContainer>
     <FeedTabs>
-      <Link to={`/${user}/tweet`}>
-        <FeedTab active>Tweets</FeedTab>
-      </Link>
-      <Link to={`/${user}/with_replies`}>
-        <FeedTab>Tweets & replies</FeedTab>
-      </Link>
-      <Link to={`/${user}/media`}>
-        <FeedTab>Media</FeedTab>
-      </Link>
+      <StyledLink activeClassName="active" to={`/${user}/tweet`}>
+        Tweets
+      </StyledLink>
+      <StyledLink activeClassName="active" to={`/${user}/with_replies`}>
+        Tweets & replies
+      </StyledLink>
+      <StyledLink activeClassName="active" to={`/${user}/media`}>
+        Media
+      </StyledLink>
     </FeedTabs>
     {tweets.map(tweet => (
       <Tweet
