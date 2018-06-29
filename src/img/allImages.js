@@ -1,9 +1,9 @@
 import avatar from './avatar.png';
 import resources from './resources.png';
 import ill from './ill.png';
-import re1 from './re1.png';
-import re2 from './re2.png';
-import re3 from './re3.png';
+import appleInsider from './appleInsider.png';
+import creode from './creode.png';
+import epiphany from './epiphany.png';
 import avatar1 from './avatar1.png';
 import avatar2 from './avatar2.png';
 import avatar3 from './avatar3.png';
@@ -18,9 +18,9 @@ import photos5 from './photos5.png';
 import photos6 from './photos6.png';
 
 export const allImages = {
-  re1,
-  re2,
-  re3,
+  appleInsider,
+  creode,
+  epiphany,
   photos1,
   photos2,
   photos3,

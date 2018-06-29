@@ -69,19 +69,19 @@ export const trends = [
 
 export const followersSuggest = [
   {
-    img: allImages.re1,
+    img: allImages.appleInsider,
     name: 'AppleInsider',
     username: 'appleinsider',
     link: '/AppleInsider'
   },
   {
-    img: allImages.re2,
+    img: allImages.creode,
     name: 'Creode',
     username: 'Creode',
     link: '/Creode'
   },
   {
-    img: allImages.re3,
+    img: allImages.epiphany,
     name: 'Epiphany Search',
     username: 'Epiphan',
     link: '/Epiphan'
