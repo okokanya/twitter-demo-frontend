@@ -14,28 +14,23 @@ const Body = styled.div`
   padding: 0;
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Body>
-          <Header />
-          <Switch>
-            <Route path="/i" component={SomePage} />
-            <Route path="/hashtags" component={SomePage} />
-            <Route path="/trends" component={SomePage} />
-            <Route exact path="/:user/with_replies" component={Profile} />
-            <Route exact path="/:user/media" component={Profile} />
-            <Route exact path="/:user/following" component={Profile} />
-            <Route exact path="/:user/followers" component={Profile} />
-            <Route exact path="/:user/likes" component={Profile} />
-            <Route exact path="/:user" component={Profile} />
-            <Redirect to="/EveryInteract" />
-          </Switch>
-        </Body>
-      </BrowserRouter>
-    );
-  }
-}
-
+const App = () => (
+  <BrowserRouter>
+    <Body>
+      <Header />
+      <Switch>
+        <Route path="/i" component={SomePage} />
+        <Route path="/hashtags" component={SomePage} />
+        <Route path="/trends" component={SomePage} />
+        <Route exact path="/:user/with_replies" component={Profile} />
+        <Route exact path="/:user/media" component={Profile} />
+        <Route exact path="/:user/following" component={Profile} />
+        <Route exact path="/:user/followers" component={Profile} />
+        <Route exact path="/:user/likes" component={Profile} />
+        <Route exact path="/:user" component={Profile} />
+        <Redirect to="/EveryInteract" />
+      </Switch>
+    </Body>
+  </BrowserRouter>
+);
 export default App;

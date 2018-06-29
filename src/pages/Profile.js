@@ -10,7 +10,6 @@ import Stat from '../Ui/Stat';
 import { More } from '../Ui/Icon';
 
 import headerImg from '../img/headerImg.png';
-import { Link } from 'react-router-dom';
 
 const Statistic = styled.div`
   height: 60px;
@@ -53,9 +52,21 @@ const Profile = ({ match }) => (
         <Container small>
           <StatBlock>
             <Stat number={8058} title="Tweets" to={`/${match.params.user}`} />
-            <Stat number={721} title="Following" to={`/${match.params.user}/following`} />
-            <Stat number={1815} title="Followers" to={`/${match.params.user}/followers`} />
-            <Stat number={460} title="Likes" to={`/${match.params.user}/likes`}/>
+            <Stat
+              number={721}
+              title="Following"
+              to={`/${match.params.user}/following`}
+            />
+            <Stat
+              number={1815}
+              title="Followers"
+              to={`/${match.params.user}/followers`}
+            />
+            <Stat
+              number={460}
+              title="Likes"
+              to={`/${match.params.user}/likes`}
+            />
             <Stat number={2} title="Lists" to={`/${match.params.user}/lists`} />
           </StatBlock>
         </Container>

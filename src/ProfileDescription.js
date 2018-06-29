@@ -74,7 +74,10 @@ const ProfileDescription = ({ user }) => (
       @{user}
       <span>follows you</span>
     </Subheader>
-    <Description>UX Design studio focussed problem solving creativity. Design to us is how can we make things *work* amazing. </Description>
+    <Description>
+      UX Design studio focussed problem solving creativity. Design to us is how
+      can we make things *work* amazing.{' '}
+    </Description>
     <ul>
       <Icon>
         <IconImg>

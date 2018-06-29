@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 import Tweet from './Tweet';
 import Embed from '../Ui/Embed';
 
 import { colors } from '../Ui/Colors';
 import { tweets } from '../data';
-import { NavLink } from 'react-router-dom';
 
 const FeedContainer = styled.section`
   height: auto;
