@@ -33,6 +33,7 @@ const Subheader = styled.div`
   margin-bottom: 20px;
 
   span {
+    padding: 8px;
     font-size: 12px;
   }
 `;
@@ -73,7 +74,7 @@ const ProfileDescription = ({ user }) => (
       @{user}
       <span>follows you</span>
     </Subheader>
-    <Description>Some info here</Description>
+    <Description>UX Design studio focussed problem solving creativity. Design to us is how can we make things *work* amazing. </Description>
     <ul>
       <Icon>
         <IconImg>
