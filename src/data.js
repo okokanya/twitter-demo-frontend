@@ -1,25 +1,8 @@
-import avatar from './img/avatar.png';
-import resources from './img/resources.png';
-import ill from './img/ill.png';
-import re1 from './img/re1.png';
-import re2 from './img/re2.png';
-import re3 from './img/re3.png';
-import Avatar1 from './img/Avatar1.png';
-import Avatar2 from './img/Avatar2.png';
-import Avatar3 from './img/Avatar3.png';
-import Avatar4 from './img/Avatar4.png';
-import Avatar5 from './img/Avatar5.png';
-import Avatar6 from './img/Avatar6.png';
-import Photos1 from './img/Photos1.png';
-import Photos2 from './img/Photos2.png';
-import Photos3 from './img/Photos3.png';
-import Photos4 from './img/Photos4.png';
-import Photos5 from './img/Photos5.png';
-import Photos6 from './img/Photos6.png';
+import { allImages } from './img/allImages';
 
 export const tweets = [
   {
-    avatar: avatar,
+    avatar: allImages.avatar,
     username: 'EveryInteract',
     name: 'Every Interaction',
     time: new Date(2018, 6, 20),
@@ -30,10 +13,10 @@ export const tweets = [
         everyinteraction.com/resources/
       </a>
       #webdesign #UI`,
-    image: resources
+    image: allImages.resources
   },
   {
-    avatar: avatar,
+    avatar: allImages.avatar,
     username: 'EveryInteract',
     name: 'Every Interaction',
     time: new Date(2018, 6, 20),
@@ -42,7 +25,7 @@ export const tweets = [
     html: `Our new website concept; Taking you from… @ Every Interaction instagram.com/p/BNFGrfhBP3M/`
   },
   {
-    avatar: avatar,
+    avatar: allImages.avatar,
     username: 'EveryInteract',
     name: 'Every Interaction',
     time: new Date(2018, 6, 20),
@@ -50,7 +33,7 @@ export const tweets = [
     html: `Variable web fonts are coming, and will open a world of opportunities 
     for weight use online`,
     embed: {
-      img: ill,
+      img: allImages.ill,
       title: 'The Future of Web Fonts',
       text:
         'We love typefaces. They give our sites and applications personalized feel. They convey the information and tell a story. They establish information hierarchy. But they’re…',
@@ -86,19 +69,19 @@ export const trends = [
 
 export const followersSuggest = [
   {
-    img: re1,
+    img: allImages.re1,
     name: 'AppleInsider',
     username: 'appleinsider',
     link: '/AppleInsider'
   },
   {
-    img: re2,
+    img: allImages.re2,
     name: 'Creode',
     username: 'Creode',
     link: '/Creode'
   },
   {
-    img: re3,
+    img: allImages.re3,
     name: 'Epiphany Search',
     username: 'Epiphan',
     link: '/Epiphan'
@@ -107,53 +90,53 @@ export const followersSuggest = [
 
 export const followersYouKnow = [
   {
-    img: Avatar1,
+    img: allImages.avatar1,
     link: '#'
   },
   {
-    img: Avatar2,
+    img: allImages.avatar2,
     link: '#'
   },
   {
-    img: Avatar3,
+    img: allImages.avatar3,
     link: '#'
   },
   {
-    img: Avatar4,
+    img: allImages.avatar4,
     link: '#'
   },
   {
-    img: Avatar5,
+    img: allImages.avatar5,
     link: '#'
   },
   {
-    img: Avatar6,
+    img: allImages.avatar6,
     link: '#'
   }
 ];
 export const photosVideos = [
   {
-    img: Photos1,
+    img: allImages.photos1,
     link: '#'
   },
   {
-    img: Photos2,
+    img: allImages.photos2,
     link: '#'
   },
   {
-    img: Photos3,
+    img: allImages.photos3,
     link: '#'
   },
   {
-    img: Photos4,
+    img: allImages.photos4,
     link: '#'
   },
   {
-    img: Photos5,
+    img: allImages.photos5,
     link: '#'
   },
   {
-    img: Photos6,
+    img: allImages.photos6,
     link: '#'
   }
-]
+];

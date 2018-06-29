@@ -17,7 +17,7 @@ const Container = styled.div`
   width: 300px;
 `;
 
-const DescAvatar = styled.div`
+const Descavatar = styled.div`
   margin-top: -160px;
   margin-bottom: 20px;
 `;
@@ -65,9 +65,9 @@ const Buttons = styled.div`
 
 const ProfileDescription = ({ user }) => (
   <Container>
-    <DescAvatar>
+    <Descavatar>
       <Avatar big />
-    </DescAvatar>
+    </Descavatar>
     <Header>Every Interaction</Header>
     <Subheader>
       @{user}
@@ -107,7 +107,7 @@ const ProfileDescription = ({ user }) => (
       ))}
     </LeftSideBlock>
 
-    <LeftSideBlock icon={Photo} count={522} title="Photos and videos">
+    <LeftSideBlock icon={Photo} count={522} title="photos and videos">
       {photosVideos.map(pick => <Picture src={pick.img} link={pick.link} />)}
     </LeftSideBlock>
   </Container>
