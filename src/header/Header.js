@@ -23,14 +23,11 @@ const Nav = styled.div`
   position: relative;
 `;
 
-const NavBlock = styled.div`
+const Block = styled.div`
   display: flex;
-  div {
-    margin: 0 8px;
-  }
 `;
 
-const NavItem = styled.div`
+const Item = styled.div`
   margin-left: 16px;
   display: flex;
   color: #66757f;
@@ -45,8 +42,8 @@ const NavItem = styled.div`
   }
 `;
 
-const NavItemImg = styled.div`
-  margin-right: 5px;
+const ItemImg = styled.div`
+  margin-right: 8px;
   display: flex;
   align-items: center;
 `;
@@ -65,37 +62,37 @@ const TwitterLogo = styled.div`
 const Header = () => (
   <Container>
     <Nav>
-      <NavBlock>
-        <NavItem>
-          <NavItemImg>
+      <Block>
+        <Item>
+          <ItemImg>
             <Home />
-          </NavItemImg>
+          </ItemImg>
           <Link to="/">Home</Link>
-        </NavItem>
-        <NavItem>
-          <NavItemImg>
+        </Item>
+        <Item>
+          <ItemImg>
             <Moments />
-          </NavItemImg>
+          </ItemImg>
           <Link to="/i/moments">Moments</Link>
-        </NavItem>
-        <NavItem>
-          <NavItemImg>
+        </Item>
+        <Item>
+          <ItemImg>
             <Notifications />
-          </NavItemImg>
+          </ItemImg>
           <Link to="/i/notifications">Notifications</Link>
-        </NavItem>
-        <NavItem>
-          <NavItemImg>
+        </Item>
+        <Item>
+          <ItemImg>
             <Messages />
-          </NavItemImg>
+          </ItemImg>
           <Link to="/i/messages">Messages</Link>
-        </NavItem>
-      </NavBlock>
-      <NavBlock>
+        </Item>
+      </Block>
+      <Block>
         <SearchInput placeholder="Search Twitter" />
         <Avatar small />
         <Button blue>Tweet</Button>
-      </NavBlock>
+      </Block>
       <TwitterLogo>
         <TwitterIcon />
       </TwitterLogo>

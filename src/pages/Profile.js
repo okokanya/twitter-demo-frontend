@@ -9,8 +9,6 @@ import Button from '../Ui/Button';
 import Stat from '../Ui/Stat';
 import { More } from '../Ui/Icon';
 
-import headerImg from '../img/headerImg.png';
-
 const Statistic = styled.div`
   height: 60px;
   border-bottom: 2px solid #c5cdd2b0;
@@ -25,7 +23,7 @@ const Content = styled.div`
 const HeaderImg = styled.div`
   height: 380px;
   width: 100%;
-  background-image: url(${headerImg});
+  background-image: url('../img/headerImg.png');
   background-size: cover;
   background-position-y: -230px;
   background-repeat: no-repeat;
