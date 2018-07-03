@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
 import Profile from './Pages/Profile';
-import SomePage from './somePage';
+import SomePage from './SomePage';
 import './App.css';
 
 const Body = styled.div`

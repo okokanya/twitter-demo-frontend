@@ -39,7 +39,7 @@ const StatNumber = styled.div`
 `;
 
 const Stat = ({ number, title, to }) => (
-  <StatContainer exact to={to} activeClassName="active" >
+  <StatContainer exact to={to} activeClassName="active">
     <StatTitle>{title}</StatTitle>
     <StatNumber>{number}</StatNumber>
   </StatContainer>

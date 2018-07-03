@@ -1,8 +1,6 @@
-import { allImages } from './img/allImages';
-
 export const tweets = [
   {
-    avatar: allImages.avatar,
+    avatar: '/img/avatar.png',
     username: 'EveryInteract',
     name: 'Every Interaction',
     time: new Date(2018, 6, 20),
@@ -13,10 +11,10 @@ export const tweets = [
         everyinteraction.com/resources/
       </a>
       #webdesign #UI`,
-    image: allImages.resources
+    image: '/img/resources.png'
   },
   {
-    avatar: allImages.avatar,
+    avatar: '/img/avatar.png',
     username: 'EveryInteract',
     name: 'Every Interaction',
     time: new Date(2018, 6, 20),
@@ -25,7 +23,7 @@ export const tweets = [
     html: `Our new website concept; Taking you from… @ Every Interaction instagram.com/p/BNFGrfhBP3M/`
   },
   {
-    avatar: allImages.avatar,
+    avatar: '/img/avatar.png',
     username: 'EveryInteract',
     name: 'Every Interaction',
     time: new Date(2018, 6, 20),
@@ -33,7 +31,7 @@ export const tweets = [
     html: `Variable web fonts are coming, and will open a world of opportunities 
     for weight use online`,
     embed: {
-      img: allImages.ill,
+      img: '/img/ill.png',
       title: 'The Future of Web Fonts',
       text:
         'We love typefaces. They give our sites and applications personalized feel. They convey the information and tell a story. They establish information hierarchy. But they’re…',
@@ -69,19 +67,19 @@ export const trends = [
 
 export const followersSuggest = [
   {
-    img: allImages.appleInsider,
+    img: '/img/appleInsider.png',
     name: 'AppleInsider',
     username: 'appleinsider',
     link: '/AppleInsider'
   },
   {
-    img: allImages.creode,
+    img: '/img/creode.png',
     name: 'Creode',
     username: 'Creode',
     link: '/Creode'
   },
   {
-    img: allImages.epiphany,
+    img: '/img/epiphany.png',
     name: 'Epiphany Search',
     username: 'Epiphan',
     link: '/Epiphan'
@@ -90,53 +88,53 @@ export const followersSuggest = [
 
 export const followersYouKnow = [
   {
-    img: allImages.avatar1,
+    img: '/img/avatar1.png',
     link: '#'
   },
   {
-    img: allImages.avatar2,
+    img: '/img/avatar2.png',
     link: '#'
   },
   {
-    img: allImages.avatar3,
+    img: '/img/avatar3.png',
     link: '#'
   },
   {
-    img: allImages.avatar4,
+    img: '/img/avatar4.png',
     link: '#'
   },
   {
-    img: allImages.avatar5,
+    img: '/img/avatar5.png',
     link: '#'
   },
   {
-    img: allImages.avatar6,
+    img: '/img/avatar6.png',
     link: '#'
   }
 ];
 export const photosVideos = [
   {
-    img: allImages.photos1,
+    img: '/img/photos1.png',
     link: '#'
   },
   {
-    img: allImages.photos2,
+    img: '/img/photos2.png',
     link: '#'
   },
   {
-    img: allImages.photos3,
+    img: '/img/photos3.png',
     link: '#'
   },
   {
-    img: allImages.photos4,
+    img: '/img/photos4.png',
     link: '#'
   },
   {
-    img: allImages.photos5,
+    img: '/img/photos5.png',
     link: '#'
   },
   {
-    img: allImages.photos6,
+    img: '/img/photos6.png',
     link: '#'
   }
 ];
