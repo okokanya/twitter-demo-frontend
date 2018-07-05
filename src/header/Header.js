@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Container from '../Ui/Container';
 import {
@@ -6,13 +7,11 @@ import {
   Moments,
   Notifications,
   Messages,
-  TwitterIcon
+  TwitterIcon,
 } from '../Ui/Icon';
 import Avatar from '../Ui/Avatar';
 import Button from '../Ui/Button';
 import SearchInput from '../Ui/SearchInput';
-
-import { Link } from 'react-router-dom';
 
 const Nav = styled.div`
   display: flex;

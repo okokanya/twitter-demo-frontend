@@ -307,12 +307,12 @@ const Comment = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M0 5.39922C0 2.41732 2.41732 0 5.39922 0H8.37057C11.4796 0 14 2.52038 14 5.62943V5.62943C14 7.7047 12.8582 9.61167 11.0289 10.5917L5.6 13.5V10.9L4.54249 10.73C1.92488 10.3094 0 8.05042 0 5.39922V5.39922Z"
       transform="translate(1 1)"
       stroke="#70818F"
-      stroke-width="1.5"
+      strokeWidth="1.5"
     />
   </svg>
 );
@@ -362,8 +362,8 @@ const LikesRed = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M7.29288 13.2444C7.29288 13.2444 2.6947 9.8645 1.5365 8.38818C-0.374329 5.95264 -0.122192 3.90466 0.292877 2.24438C0.516693 1.349 1.03912 0.686646 2.29288 0.244385C3.54663 -0.197998 4.91339 0.0596924 5.29288 0.244385C5.86462 0.522583 6.97675 1.85718 7.2373 2.1759C7.49786 1.85718 8.60999 0.522583 9.18173 0.244385C9.56122 0.0596924 10.928 -0.197998 12.1817 0.244385C13.4355 0.686646 13.9579 1.349 14.1817 2.24438C14.5979 3.90894 14.8451 5.96326 12.9232 8.40723C11.7663 9.87842 7.29285 13.2444 7.29288 13.2444Z"
       transform="translate(0.707153 0.755615)"
       fill="#E32B51"
@@ -371,7 +371,7 @@ const LikesRed = () => (
   </svg>
 );
 
-const Followers = ({ active }) => (
+const Followers = () => (
   <svg
     width="13"
     height="16"
@@ -380,15 +380,15 @@ const Followers = ({ active }) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M6 3.32C6 5.595 5.217 6.69 3 6.69C0.783 6.69 0 5.545 0 3.32C0 1.415 1.416 0 3 0C4.584 0 6 1.415 6 3.32Z"
       transform="translate(3.25 0.500122)"
       stroke="#657888"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M1.35818 5.5C0.400176 5.5 -0.256824 4.523 0.0971763 3.628C0.934176 1.512 3.15018 0 5.75018 0C8.35118 0 10.5662 1.512 11.4032 3.628C11.7572 4.523 11.1002 5.5 10.1422 5.5H1.35818Z"
       transform="translate(0.499723 9.23999)"
       stroke="#657888"
@@ -425,8 +425,8 @@ const Delete = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M7.77165 0.229003C7.48448 -0.0590359 7.03818 -0.0777051 6.77502 0.18633L3.86602 3.10583L1.21486 0.445031C0.953474 0.182774 0.510724 0.201443 0.226226 0.486815C-0.0582726 0.773075 -0.0769428 1.21758 0.18444 1.47984L2.83561 4.14064L0.413816 6.57207C0.150656 6.83611 0.169326 7.28417 0.455602 7.57221C0.742767 7.86024 1.18907 7.87891 1.45223 7.61488L3.87403 5.18344L6.49585 7.81491C6.75724 8.07716 7.19999 8.05849 7.48448 7.77312C7.76987 7.48686 7.78854 7.04325 7.52716 6.7801L4.90533 4.14864L7.81432 1.22914C8.07749 0.965101 8.05882 0.517041 7.77165 0.229003Z"
       fill="#CCD6DD"
     />
@@ -442,8 +442,8 @@ const Dot = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M1 2C1.55228 2 2 1.55228 2 1C2 0.447715 1.55228 0 1 0C0.447715 0 0 0.447715 0 1C0 1.55228 0.447715 2 1 2Z"
       fill="#66757F"
     />
@@ -459,22 +459,22 @@ const People = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M4.635 2.564C4.635 4.322 4.031 5.168 2.318 5.168C0.605 5.168 0 4.283 0 2.564C0 1.092 1.094 0 2.318 0C3.541 0 4.635 1.092 4.635 2.564Z"
       transform="translate(2.62408 0.500305)"
       stroke="#1DA1F2"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M1.04927 4.248C0.309274 4.248 -0.198726 3.494 0.0752739 2.802C0.722274 1.168 2.43327 0 4.44227 0C6.45027 0 8.16127 1.168 8.80827 2.802C9.08227 3.494 8.57427 4.248 7.83427 4.248H1.04927Z"
       transform="translate(0.499817 7.28308)"
       stroke="#1DA1F2"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M4.635 2.564C4.635 4.322 4.031 5.168 2.318 5.168C0.605 5.168 0 4.283 0 2.564C0 1.092 1.094 0 2.318 0C3.541 0 4.635 1.092 4.635 2.564Z"
       transform="translate(8.62408 0.500305)"
       stroke="#1DA1F2"
@@ -496,8 +496,8 @@ const Pinned = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M2 0H9L8 2C8 2 7.58244 4.16488 8 5C8.41756 5.83512 9 6 9 6L11 8H8L7 9.00908L6 12H5L4 9.00908L3 8H0L2 6C2 6 2.87808 5.28051 3 5C3.12192 4.71949 3 2 3 2L2 0Z"
       fill="#0072BB"
     />
@@ -525,5 +525,5 @@ export {
   Followers,
   Delete,
   Dot,
-  LikesRed
+  LikesRed,
 };

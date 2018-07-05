@@ -1,9 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
-
-import { trends } from '../data';
-import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   margin-bottom: 20px;
@@ -20,7 +18,7 @@ const Header = styled.a`
 
 const makeMeTheKey = input => {
   if (input > 10000) {
-    return Math.round((input / 1000) * 10) / 10 + 'K';
+    return `${Math.round((input / 1000) * 10) / 10} K`;
   }
   return <FormattedNumber value={input} />;
 };

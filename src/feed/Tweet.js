@@ -1,9 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { distanceInWords } from 'date-fns';
 import styled from 'styled-components';
 import { Comment, Retweet, Likes, Envelope } from '../Ui/Icon';
-import { distanceInWords } from 'date-fns';
-
-import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   border-bottom: 1px solid #e6ecf0;
@@ -62,16 +61,7 @@ const Icon = styled.span`
   }
 `;
 
-const Tweet = ({
-  pinned,
-  children,
-  username,
-  time,
-  name,
-  avatar,
-  stat = [],
-  big
-}) => (
+const Tweet = ({ children, username, time, name, avatar, stat = [], big }) => (
   <Container>
     <Avatar>
       <img width={50} src={avatar} alt={username} />

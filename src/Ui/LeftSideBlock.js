@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from './Colors';
+import colors from './Colors';
 
 const Wrapper = styled.div`
   margin-bottom: 20px;
@@ -19,17 +19,10 @@ const Content = styled.div`
   flex-wrap: wrap;
 `;
 
-const Margin = styled.div`
-  margin-right: 5px;
-`;
-
 const LeftSideBlock = ({ icon: Icon, count, title, children }) => (
   <Wrapper>
     <Header>
-      <Margin>
-        <Icon />
-      </Margin>{' '}
-      {count} {title}
+      <Icon /> {count} {title}
     </Header>
     <Content>{children}</Content>
   </Wrapper>

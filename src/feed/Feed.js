@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import Tweet from './Tweet';
 import Embed from '../Ui/Embed';
 
-import { colors } from '../Ui/Colors';
+import colors from '../Ui/Colors';
 import { tweets } from '../data';
 
 const FeedContainer = styled.section`
@@ -19,18 +19,6 @@ const FeedTabs = styled.div`
   padding: 20px;
   align-items: center;
   border-bottom: 1px solid #e6ecf0;
-`;
-
-const FeedTab = styled.div`
-  font-size: 20px;
-  font-weight: bold;
-  color: ${props => (props.active ? 'black' : colors.blue)};
-  margin-right: 20px;
-  cursor: pointer;
-
-  :hover {
-    color: black;
-  }
 `;
 
 const StyledLink = styled(NavLink)`
