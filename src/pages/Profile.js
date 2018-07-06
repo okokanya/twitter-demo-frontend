@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import axios from 'axios';
+import API_KEY from '../config';
 import Feed from '../Feed/Feed';
 import ProfileDescription from '../ProfileDescription';
 import LinksBlock from '../LinksBlock';
@@ -23,12 +24,17 @@ const Content = styled.div`
 const HeaderImg = styled.div`
   height: 380px;
   width: 100%;
-  background-image: url('../img/headerImg.png');
+  background-image: url(${props => props.src});
   background-size: cover;
   background-position-y: -230px;
   background-repeat: no-repeat;
 `;
-
+const ErrorMessage = styled.div`
+  font-size: 24px;
+  margin-top: 48px;
+  color: pink;
+  font-weight: bold;
+`;
 const RightBlock = styled.div`
   position: absolute;
   right: 0;
@@ -42,48 +48,107 @@ const RightBlock = styled.div`
 const StatBlock = styled.div`
   display: flex;
 `;
-const Profile = ({ match }) => (
-  <div>
-    <HeaderImg />
-    <Statistic>
+
+class Profile extends React.Component {
+  state = {
+    loading: true,
+    user: null,
+  };
+
+  componentDidMount() {
+    const userId = this.props.match.params.user;
+    const url = `https://twitter-demo.erodionov.ru/api/v1/accounts/${userId}?access_token=${API_KEY}`;
+    axios
+      .get(url)
+      .then(res => {
+        this.handleGetUser(res.data);
+      })
+      .catch(error => {
+        this.handleError(error);
+      });
+  }
+
+  get loadingMessage() {
+    return (
       <Container>
-        <Container small>
-          <StatBlock>
-            <Stat number={8058} title="Tweets" to={`/${match.params.user}`} />
-            <Stat
-              number={721}
-              title="Following"
-              to={`/${match.params.user}/following`}
-            />
-            <Stat
-              number={1815}
-              title="Followers"
-              to={`/${match.params.user}/followers`}
-            />
-            <Stat
-              number={460}
-              title="Likes"
-              to={`/${match.params.user}/likes`}
-            />
-            <Stat number={2} title="Lists" to={`/${match.params.user}/lists`} />
-          </StatBlock>
-        </Container>
-        <RightBlock>
-          <Button>Follow</Button>
-          <More />
-        </RightBlock>
+        <ErrorMessage>loading</ErrorMessage>
       </Container>
-    </Statistic>
-    <Content>
+    );
+  }
+  get error404Message() {
+    return (
       <Container>
-        <ProfileDescription user={match.params.user} />
-        <Container small>
-          <Feed user={match.params.user} />
-        </Container>
-        <LinksBlock />
+        <ErrorMessage>404 error</ErrorMessage>
       </Container>
-    </Content>
-  </div>
-);
+    );
+  }
+
+  handleGetUser = user => {
+    this.setState({ loading: false, user });
+  };
+
+  handleError = () => {
+    this.setState({ loading: false, user: null });
+  };
+
+  render() {
+    const { match } = this.props;
+    const { user, loading } = this.state;
+    console.log(user);
+    if (loading) return this.loadingMessage;
+    if (!user) return this.error404Message;
+    return (
+      <div>
+        <HeaderImg src={user.header_static} />
+        <Statistic>
+          <Container>
+            <Container small>
+              <StatBlock>
+                <Stat
+                  number={user.statuses_count}
+                  title="Tweets"
+                  to={`/${match.params.user}`}
+                />
+                <Stat
+                  number={user.following_count}
+                  title="Following"
+                  to={`/${match.params.user}/following`}
+                />
+                <Stat
+                  number={user.followers_count}
+                  title="Followers"
+                  to={`/${match.params.user}/followers`}
+                />
+                <Stat
+                  number={0}
+                  title="Likes"
+                  to={`/${match.params.user}/likes`}
+                />
+                <Stat
+                  number={0}
+                  title="Lists"
+                  to={`/${match.params.user}/lists`}
+                />
+              </StatBlock>
+            </Container>
+            <RightBlock>
+              <Button>Follow</Button>
+              <More />
+            </RightBlock>
+          </Container>
+        </Statistic>
+        <Content>
+          <Container>
+            <ProfileDescription user={user} />
+            <Container small>
+              <Feed user={match.params.user} />
+            </Container>
+            <LinksBlock />
+          </Container>
+        </Content>
+      </div>
+    );
+  }
+}
 
 export default Profile;

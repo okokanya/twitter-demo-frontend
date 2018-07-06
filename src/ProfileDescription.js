@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { format } from 'date-fns';
 import Avatar from './Ui/Avatar';
 import Button from './Ui/Button';
-
 import { Location, LinkIcon, Joined, Followers, Photo } from './Ui/Icon';
 import LeftSideBlock from './Ui/LeftSideBlock';
 import Picture from './Ui/Picture';
-
 import { followersYouKnow, photosVideos } from './data';
 
 const Container = styled.div`
@@ -67,16 +65,15 @@ const Buttons = styled.div`
 const ProfileDescription = ({ user }) => (
   <Container>
     <Descavatar>
-      <Avatar big />
+      <Avatar big src={user.avatar_static} />
     </Descavatar>
-    <Header>Every Interaction</Header>
+    <Header>{user.display_name}</Header>
     <Subheader>
-      @{user}
+      @{user.username}
       <span>follows you</span>
     </Subheader>
     <Description>
-      UX Design studio focussed problem solving creativity. Design to us is how
-      can we make things *work* amazing.{' '}
+      <div dangerouslySetInnerHTML={{ __html: user.note }} />
     </Description>
     <ul>
       <Icon>
@@ -88,12 +85,12 @@ const ProfileDescription = ({ user }) => (
         <IconImg>
           <LinkIcon />
         </IconImg>
-        <a href="#a">everyiteraction.com</a>
+        <a href={user.url}>{user.url}</a>
       </Icon>
       <Icon>
         <IconImg>
           <Joined />
-        </IconImg>Joined May 2008
+        </IconImg>Joined {format(user.created_at, 'D MMMM YYYY')}
       </Icon>
     </ul>
     <Buttons>

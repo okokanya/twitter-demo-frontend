@@ -13,6 +13,9 @@ const Container = styled.div`
 const Avatar = styled.div`
   width: 50px;
   padding-right: 10px;
+  img {
+    border-radius: 50%;
+  }
 `;
 
 const Body = styled.div`
