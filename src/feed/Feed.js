@@ -6,13 +6,13 @@ import Embed from '../Ui/Embed';
 
 import colors from '../Ui/colors';
 
-const FeedContainer = styled.section`
+const Container = styled.section`
   height: auto;
   background-color: white;
   border-bottom: 2px solid #e1e8ed;
 `;
 
-const FeedTabs = styled.div`
+const Tabs = styled.div`
   display: flex;
   padding: 20px;
   align-items: center;
@@ -47,7 +47,6 @@ class Feed extends React.Component {
       .then(res => res.json())
       .then(res => {
         this.handleGetStatuses(res);
-        console.log(res);
       })
       .catch(error => {
         this.handleError(error);
@@ -66,21 +65,14 @@ class Feed extends React.Component {
     const { user } = this.props;
     if (this.state.loading) return <div>Loading...</div>;
     if (!this.state.statusList) return <div>No tweets found</div>;
-    console.log(this.state.statusList);
 
     return (
-      <FeedContainer>
-        <FeedTabs>
-          <StyledLink activeClassName="active" to={`/${user}/tweet`}>
-            Tweets
-          </StyledLink>
-          <StyledLink activeClassName="active" to={`/${user}/with_replies`}>
-            Tweets & replies
-          </StyledLink>
-          <StyledLink activeClassName="active" to={`/${user}/media`}>
-            Media
-          </StyledLink>
-        </FeedTabs>
+      <Container>
+        <Tabs>
+          <StyledLink to={`/${user}/tweet`}>Tweets</StyledLink>
+          <StyledLink to={`/${user}/with_replies`}>Tweets & replies</StyledLink>
+          <StyledLink to={`/${user}/media`}>Media</StyledLink>
+        </Tabs>
         {this.state.statusList.map(tweet => (
           <Tweet
             key={tweet.id}
@@ -118,7 +110,7 @@ class Feed extends React.Component {
             )}
           </Tweet>
         ))}
-      </FeedContainer>
+      </Container>
     );
   }
 }

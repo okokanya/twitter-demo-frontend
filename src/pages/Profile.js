@@ -55,11 +55,12 @@ class Profile extends React.Component {
 
   componentDidMount() {
     const userId = this.props.match.params.user;
-    const url = `https://twitter-demo.erodionov.ru/api/v1/accounts/${userId}?access_token=${process.env.REACT_APP_API_KEY}`;
+    const url = `https://twitter-demo.erodionov.ru/api/v1/accounts/${userId}?access_token=${
+      process.env.REACT_APP_API_KEY
+    }`;
     fetch(url)
       .then(res => res.json())
       .then(res => {
-        console.log(res)
         this.handleGetUser(res);
       })
       .catch(error => {
@@ -93,7 +94,6 @@ class Profile extends React.Component {
   render() {
     const { match } = this.props;
     const { user, loading } = this.state;
-    console.log(user);
     if (loading) return this.loadingMessage;
     if (!user) return this.error404Message;
     return (

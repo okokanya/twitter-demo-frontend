@@ -41,7 +41,7 @@ const Item = styled.div`
   }
 `;
 
-const ItemImg = styled.div`
+const Img = styled.div`
   margin-right: 8px;
   display: flex;
   align-items: center;
@@ -63,27 +63,27 @@ const Header = () => (
     <Nav>
       <Block>
         <Item>
-          <ItemImg>
+          <Img>
             <Home />
-          </ItemImg>
+          </Img>
           <Link to="/">Home</Link>
         </Item>
         <Item>
-          <ItemImg>
+          <Img>
             <Moments />
-          </ItemImg>
+          </Img>
           <Link to="/i/moments">Moments</Link>
         </Item>
         <Item>
-          <ItemImg>
+          <Img>
             <Notifications />
-          </ItemImg>
+          </Img>
           <Link to="/i/notifications">Notifications</Link>
         </Item>
         <Item>
-          <ItemImg>
+          <Img>
             <Messages />
-          </ItemImg>
+          </Img>
           <Link to="/i/messages">Messages</Link>
         </Item>
       </Block>
