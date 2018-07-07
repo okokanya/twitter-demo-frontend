@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 import Tweet from './Tweet';
 import Embed from '../Ui/Embed';
 
-import colors from '../Ui/Colors';
+import colors from '../Ui/colors';
 
 const FeedContainer = styled.section`
   height: auto;
@@ -44,7 +43,7 @@ class Feed extends React.Component {
     const url = `https://twitter-demo.erodionov.ru/api/v1/accounts/${
       this.props.user
     }/statuses?access_token=${process.env.REACT_APP_API_KEY}`;
-    axios
+    fetch
       .get(url)
       .then(res => {
         this.handleGetStatuses(res.data);

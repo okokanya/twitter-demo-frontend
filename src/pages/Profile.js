@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
 import Feed from '../Feed/Feed';
 import ProfileDescription from '../ProfileDescription';
 import LinksBlock from '../LinksBlock';
@@ -57,9 +56,9 @@ class Profile extends React.Component {
   componentDidMount() {
     const userId = this.props.match.params.user;
     const url = `https://twitter-demo.erodionov.ru/api/v1/accounts/${userId}?access_token=${process.env.REACT_APP_API_KEY}`;
-    axios
-      .get(url)
+    fetch(url)
       .then(res => {
+        console.log(res)
         this.handleGetUser(res.data);
       })
       .catch(error => {
