@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-import API_KEY from '../config';
 import Tweet from './Tweet';
 import Embed from '../Ui/Embed';
 
@@ -44,7 +43,7 @@ class Feed extends React.Component {
   componentDidMount() {
     const url = `https://twitter-demo.erodionov.ru/api/v1/accounts/${
       this.props.user
-    }/statuses?access_token=${API_KEY}`;
+    }/statuses?access_token=${process.env.REACT_APP_API_KEY}`;
     axios
       .get(url)
       .then(res => {
