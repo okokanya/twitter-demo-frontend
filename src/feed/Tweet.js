@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { distanceInWords } from 'date-fns';
 import styled from 'styled-components';
 import { Comment, Retweet, Likes, Envelope } from '../Ui/Icon';
-import { distanceInWords } from 'date-fns';
 
 const Container = styled.div`
   border-bottom: 1px solid #e6ecf0;
@@ -12,6 +13,9 @@ const Container = styled.div`
 const Avatar = styled.div`
   width: 50px;
   padding-right: 10px;
+  img {
+    border-radius: 50%;
+  }
 `;
 
 const Body = styled.div`
@@ -60,16 +64,7 @@ const Icon = styled.span`
   }
 `;
 
-const Tweet = ({
-  pinned,
-  children,
-  username,
-  time,
-  name,
-  avatar,
-  stat = [],
-  big
-}) => (
+const Tweet = ({ children, username, time, name, avatar, stat = [], big }) => (
   <Container>
     <Avatar>
       <img width={50} src={avatar} alt={username} />
@@ -81,22 +76,30 @@ const Tweet = ({
       </Header>
       {children}
       <Icons>
-        <Icon>
-          <Comment />
-          {stat.comment || ''}
-        </Icon>
-        <Icon>
-          <Retweet />
-          {stat.retweet || ''}
-        </Icon>
-        <Icon active={stat.liked}>
-          <Likes active={stat.liked} />
-          {stat.like || ''}
-        </Icon>
-        <Icon>
-          <Envelope />
-          {stat.message || ''}
-        </Icon>
+        <Link to={`/${username}/tweet/with_replies`}>
+          <Icon>
+            <Comment />
+            {stat.comment || ''}
+          </Icon>
+        </Link>
+        <Link to={`/${username}/tweet/retweet`}>
+          <Icon>
+            <Retweet />
+            {stat.retweet || ''}
+          </Icon>
+        </Link>
+        <Link to={`/${username}/tweet/likes`}>
+          <Icon active={stat.liked}>
+            <Likes active={stat.liked} />
+            {stat.like || ''}
+          </Icon>
+        </Link>
+        <Link to={`/${username}/tweet/message`}>
+          <Icon>
+            <Envelope />
+            {stat.message || ''}
+          </Icon>
+        </Link>
       </Icons>
     </Body>
   </Container>

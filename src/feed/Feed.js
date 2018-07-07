@@ -1,90 +1,118 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { NavLink } from 'react-router-dom';
 import Tweet from './Tweet';
 import Embed from '../Ui/Embed';
 
-import avatar from '../img/avatar.png';
-import ill from '../img/ill.png';
+import colors from '../Ui/colors';
 
-import resources from '../img/resources.png';
-import { colors } from '../Ui/Colors';
-
-const FeedContainer = styled.section`
+const Container = styled.section`
   height: auto;
   background-color: white;
   border-bottom: 2px solid #e1e8ed;
 `;
 
-const FeedTabs = styled.div`
+const Tabs = styled.div`
   display: flex;
   padding: 20px;
   align-items: center;
   border-bottom: 1px solid #e6ecf0;
 `;
 
-const FeedTab = styled.div`
+const StyledLink = styled(NavLink)`
   font-size: 20px;
   font-weight: bold;
-  color: ${props => (props.active ? 'black' : colors.blue)};
+  color: ${colors.blue};
   margin-right: 20px;
   cursor: pointer;
-
   :hover {
+    color: black;
+  }
+  &.active {
     color: black;
   }
 `;
 
-const Feed = () => (
-  <FeedContainer>
-    <FeedTabs>
-      <FeedTab active>Tweets</FeedTab>
-      <FeedTab>Tweets & replies</FeedTab>
-      <FeedTab>Media</FeedTab>
-    </FeedTabs>
-    <Tweet
-      avatar={avatar}
-      username="EveryInteract"
-      name="Every Interaction"
-      time={new Date(2018, 6, 20)}
-      stat={{ comment: 10, retweet: 2, like: 3, message: 4, liked: true }}
-      big
-    >
-      We’ve made some more resources for all you wonderful #design folk
-      <a href="everyinteraction.com/resources/">
-        everyinteraction.com/resources/
-      </a>{' '}
-      #webdesign #UI <img src={resources} />
-    </Tweet>
-    <Tweet
-      avatar={avatar}
-      username="EveryInteract"
-      name="Every Interaction"
-      time={new Date(2018, 6, 20)}
-      stat={{ comment: 0, retweet: 62, like: 30, message: 4 }}
-      big
-    >
-      Our new website concept; Taking you from… @ Every Interaction
-      instagram.com/p/BNFGrfhBP3M/
-    </Tweet>
-    <Tweet
-      avatar={avatar}
-      username="EveryInteract"
-      name="Every Interaction"
-      time={new Date(2018, 6, 20)}
-      stat={{ comment: 0, retweet: 27, like: 3, message: 4 }}
-    >
-      Variable web fonts are coming, and will open a world of opportunities for
-      weight use online
-      <Embed
-        img={ill}
-        title="The Future of Web Fonts"
-        text="We love typefaces. They give our sites and applications personalized feel. They convey the information and tell a story. They establish information hierarchy. But they’re…"
-        link="vilijamis.com"
-        linkUrl="http://vilijamis.com/"
-      />
-    </Tweet>
-  </FeedContainer>
-);
+class Feed extends React.Component {
+  state = {
+    loading: true,
+    statusList: null,
+  };
+
+  componentDidMount() {
+    const url = `https://twitter-demo.erodionov.ru/api/v1/accounts/${
+      this.props.user
+    }/statuses?access_token=${process.env.REACT_APP_API_KEY}`;
+    fetch(url)
+      .then(res => res.json())
+      .then(res => {
+        this.handleGetStatuses(res);
+      })
+      .catch(error => {
+        this.handleError(error);
+      });
+  }
+
+  handleGetStatuses = statusList => {
+    this.setState({ loading: false, statusList });
+  };
+
+  handleError = () => {
+    this.setState({ loading: false, statusList: null });
+  };
+
+  render() {
+    const { user } = this.props;
+    if (this.state.loading) return <div>Loading...</div>;
+    if (!this.state.statusList) return <div>No tweets found</div>;
+
+    return (
+      <Container>
+        <Tabs>
+          <StyledLink to={`/${user}/tweet`}>Tweets</StyledLink>
+          <StyledLink to={`/${user}/with_replies`}>Tweets & replies</StyledLink>
+          <StyledLink to={`/${user}/media`}>Media</StyledLink>
+        </Tabs>
+        {this.state.statusList.map(tweet => (
+          <Tweet
+            key={tweet.id}
+            avatar={tweet.account.avatar_static}
+            username={tweet.account.username}
+            name={tweet.account.display_name}
+            time={tweet.created_at}
+            stat={{
+              comment: 0,
+              retweet: tweet.reblogs_count,
+              like: tweet.favourites_count,
+              message: 0,
+              liked: tweet.favourited,
+            }}
+            big={tweet.textSize === 'big'}
+          >
+            <div dangerouslySetInnerHTML={{ __html: tweet.content }} />
+            {tweet.media_attachments &&
+              tweet.media_attachments.length > 0 &&
+              tweet.media_attachments.map(image => (
+                <img
+                  src={image.preview_url}
+                  alt={image.description}
+                  key={image.preview_url}
+                />
+              ))}
+            {tweet.embed && (
+              <Embed
+                img={tweet.embed.img}
+                title={tweet.embed.title}
+                text={tweet.embed.text}
+                link={tweet.embed.link}
+                linkUrl={tweet.embed.linkUrl}
+              />
+            )}
+          </Tweet>
+        ))}
+      </Container>
+    );
+  }
+}
 
 export default Feed;

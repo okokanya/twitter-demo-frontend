@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Container from '../Ui/Container';
 import {
@@ -6,7 +7,7 @@ import {
   Moments,
   Notifications,
   Messages,
-  TwitterIcon
+  TwitterIcon,
 } from '../Ui/Icon';
 import Avatar from '../Ui/Avatar';
 import Button from '../Ui/Button';
@@ -21,14 +22,12 @@ const Nav = styled.div`
   position: relative;
 `;
 
-const NavBlock = styled.div`
+const Block = styled.div`
   display: flex;
 `;
-const Margin = styled.div`
-  margin: 0 10px;
-`;
 
-const NavItem = styled.div`
+const Item = styled.div`
+  margin-left: 16px;
   display: flex;
   color: #66757f;
   font-size: 13px;
@@ -42,8 +41,8 @@ const NavItem = styled.div`
   }
 `;
 
-const NavItemImg = styled.div`
-  margin-right: 5px;
+const Img = styled.div`
+  margin-right: 8px;
   display: flex;
   align-items: center;
 `;
@@ -62,50 +61,37 @@ const TwitterLogo = styled.div`
 const Header = () => (
   <Container>
     <Nav>
-      <NavBlock>
-        <Margin>
-          <NavItem>
-            <NavItemImg>
-              <Home />
-            </NavItemImg>Home
-          </NavItem>
-        </Margin>
-        <Margin>
-          <NavItem>
-            <NavItemImg>
-              <Moments />
-            </NavItemImg>
-            <Margin>Moments</Margin>
-          </NavItem>
-        </Margin>
-        <Margin>
-          <NavItem>
-            <NavItemImg>
-              <Notifications />
-            </NavItemImg>
-            <Margin>Notifications</Margin>
-          </NavItem>
-        </Margin>
-        <Margin>
-          <NavItem>
-            <NavItemImg>
-              <Messages />
-            </NavItemImg>
-            <Margin>Messages</Margin>
-          </NavItem>
-        </Margin>
-      </NavBlock>
-      <NavBlock>
-        <Margin>
-          <SearchInput placeholder="Search Twitter" />
-        </Margin>
-        <Margin>
-          <Avatar small />
-        </Margin>
-        <Margin>
-          <Button blue>Tweet</Button>
-        </Margin>
-      </NavBlock>
+      <Block>
+        <Item>
+          <Img>
+            <Home />
+          </Img>
+          <Link to="/">Home</Link>
+        </Item>
+        <Item>
+          <Img>
+            <Moments />
+          </Img>
+          <Link to="/i/moments">Moments</Link>
+        </Item>
+        <Item>
+          <Img>
+            <Notifications />
+          </Img>
+          <Link to="/i/notifications">Notifications</Link>
+        </Item>
+        <Item>
+          <Img>
+            <Messages />
+          </Img>
+          <Link to="/i/messages">Messages</Link>
+        </Item>
+      </Block>
+      <Block>
+        <SearchInput placeholder="Search Twitter" />
+        <Avatar small />
+        <Button blue>Tweet</Button>
+      </Block>
       <TwitterLogo>
         <TwitterIcon />
       </TwitterLogo>

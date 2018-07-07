@@ -1,26 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { format } from 'date-fns';
 import Avatar from './Ui/Avatar';
 import Button from './Ui/Button';
-
 import { Location, LinkIcon, Joined, Followers, Photo } from './Ui/Icon';
 import LeftSideBlock from './Ui/LeftSideBlock';
 import Picture from './Ui/Picture';
-
-import Avatar1 from './img/Avatar1.png';
-import Avatar2 from './img/Avatar2.png';
-import Avatar3 from './img/Avatar3.png';
-import Avatar4 from './img/Avatar4.png';
-import Avatar5 from './img/Avatar5.png';
-import Avatar6 from './img/Avatar6.png';
-
-import Photos1 from './img/Photos1.png';
-import Photos2 from './img/Photos2.png';
-import Photos3 from './img/Photos3.png';
-import Photos4 from './img/Photos4.png';
-import Photos5 from './img/Photos5.png';
-import Photos6 from './img/Photos6.png';
+import { followersYouKnow, photosVideos } from './data';
 
 const Container = styled.div`
   position: absolute;
@@ -29,7 +15,7 @@ const Container = styled.div`
   width: 300px;
 `;
 
-const DescAvatar = styled.div`
+const Descavatar = styled.div`
   margin-top: -160px;
   margin-bottom: 20px;
 `;
@@ -45,6 +31,7 @@ const Subheader = styled.div`
   margin-bottom: 20px;
 
   span {
+    padding: 8px;
     font-size: 12px;
   }
 `;
@@ -75,17 +62,19 @@ const Buttons = styled.div`
   margin-bottom: 20px;
 `;
 
-const ProfileDescription = () => (
+const ProfileDescription = ({ user }) => (
   <Container>
-    <DescAvatar>
-      <Avatar big />
-    </DescAvatar>
-    <Header>Every Interaction</Header>
+    <Descavatar>
+      <Avatar big src={user.avatar_static} />
+    </Descavatar>
+    <Header>{user.display_name}</Header>
     <Subheader>
-      @EveryInteract
+      @{user.username}
       <span>follows you</span>
     </Subheader>
-    <Description>Some info here</Description>
+    <Description>
+      <div dangerouslySetInnerHTML={{ __html: user.note }} />
+    </Description>
     <ul>
       <Icon>
         <IconImg>
@@ -96,12 +85,12 @@ const ProfileDescription = () => (
         <IconImg>
           <LinkIcon />
         </IconImg>
-        <a href="#a">everyiteraction.com</a>
+        <a href={user.url}>{user.url}</a>
       </Icon>
       <Icon>
         <IconImg>
           <Joined />
-        </IconImg>Joined May 2008
+        </IconImg>Joined {format(user.created_at, 'D MMMM YYYY')}
       </Icon>
     </ul>
     <Buttons>
@@ -112,22 +101,15 @@ const ProfileDescription = () => (
         Message
       </Button>
     </Buttons>
+
     <LeftSideBlock icon={Followers} count={6} title="Followers you know">
-      <Picture small src={Avatar1} />
-      <Picture small src={Avatar2} />
-      <Picture small src={Avatar3} />
-      <Picture small src={Avatar4} />
-      <Picture small src={Avatar5} />
-      <Picture small src={Avatar6} />
+      {followersYouKnow.map(pick => (
+        <Picture small src={pick.img} link={pick.link} />
+      ))}
     </LeftSideBlock>
 
-    <LeftSideBlock icon={Photo} count={522} title="Photos and videos">
-      <Picture src={Photos1} />
-      <Picture src={Photos2} />
-      <Picture src={Photos3} />
-      <Picture src={Photos4} />
-      <Picture src={Photos5} />
-      <Picture src={Photos6} />
+    <LeftSideBlock icon={Photo} count={522} title="photos and videos">
+      {photosVideos.map(pick => <Picture src={pick.img} link={pick.link} />)}
     </LeftSideBlock>
   </Container>
 );

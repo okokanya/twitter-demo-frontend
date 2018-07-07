@@ -29,7 +29,7 @@ const HeaderLink = styled.div`
     padding-right: 5px;
   }
 `;
-const RightSideBlock = ({ title, children, links }) => (
+const RightSideBlock = ({ title, children, links = [] }) => (
   <Wrapper>
     <Header>
       {title}{' '}

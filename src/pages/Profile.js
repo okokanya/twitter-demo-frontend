@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import Feed from '../Feed/Feed';
 import ProfileDescription from '../ProfileDescription';
 import LinksBlock from '../LinksBlock';
@@ -8,8 +7,6 @@ import Container from '../Ui/Container';
 import Button from '../Ui/Button';
 import Stat from '../Ui/Stat';
 import { More } from '../Ui/Icon';
-
-import headerImg from '../img/headerImg.png';
 
 const Statistic = styled.div`
   height: 60px;
@@ -25,12 +22,17 @@ const Content = styled.div`
 const HeaderImg = styled.div`
   height: 380px;
   width: 100%;
-  background-image: url(${headerImg});
+  background-image: url(${props => props.src});
   background-size: cover;
   background-position-y: -230px;
   background-repeat: no-repeat;
 `;
-
+const ErrorMessage = styled.div`
+  font-size: 24px;
+  margin-top: 48px;
+  color: pink;
+  font-weight: bold;
+`;
 const RightBlock = styled.div`
   position: absolute;
   right: 0;
@@ -45,36 +47,107 @@ const StatBlock = styled.div`
   display: flex;
 `;
 
-const Profile = () => (
-  <div>
-    <HeaderImg />
-    <Statistic>
+class Profile extends React.Component {
+  state = {
+    loading: true,
+    user: null,
+  };
+
+  componentDidMount() {
+    const userId = this.props.match.params.user;
+    const url = `https://twitter-demo.erodionov.ru/api/v1/accounts/${userId}?access_token=${
+      process.env.REACT_APP_API_KEY
+    }`;
+    fetch(url)
+      .then(res => res.json())
+      .then(res => {
+        this.handleGetUser(res);
+      })
+      .catch(error => {
+        this.handleError(error);
+      });
+  }
+
+  get loadingMessage() {
+    return (
       <Container>
-        <Container small>
-          <StatBlock>
-            <Stat number={8058} title="Tweets" active />
-            <Stat number={721} title="Following" />
-            <Stat number={1815} title="Followers" />
-            <Stat number={460} title="Likes" />
-            <Stat number={2} title="Lists" />
-          </StatBlock>
-        </Container>
-        <RightBlock>
-          <Button>Follow</Button>
-          <More />
-        </RightBlock>
+        <ErrorMessage>loading</ErrorMessage>
       </Container>
-    </Statistic>
-    <Content>
+    );
+  }
+  get error404Message() {
+    return (
       <Container>
-        <ProfileDescription />
-        <Container small>
-          <Feed />
-        </Container>
-        <LinksBlock />
+        <ErrorMessage>404 error</ErrorMessage>
       </Container>
-    </Content>
-  </div>
-);
+    );
+  }
+
+  handleGetUser = user => {
+    this.setState({ loading: false, user });
+  };
+
+  handleError = () => {
+    this.setState({ loading: false, user: null });
+  };
+
+  render() {
+    const { match } = this.props;
+    const { user, loading } = this.state;
+    if (loading) return this.loadingMessage;
+    if (!user) return this.error404Message;
+    return (
+      <div>
+        <HeaderImg src={user.header_static} />
+        <Statistic>
+          <Container>
+            <Container small>
+              <StatBlock>
+                <Stat
+                  number={user.statuses_count}
+                  title="Tweets"
+                  to={`/${match.params.user}`}
+                />
+                <Stat
+                  number={user.following_count}
+                  title="Following"
+                  to={`/${match.params.user}/following`}
+                />
+                <Stat
+                  number={user.followers_count}
+                  title="Followers"
+                  to={`/${match.params.user}/followers`}
+                />
+                <Stat
+                  number={0}
+                  title="Likes"
+                  to={`/${match.params.user}/likes`}
+                />
+                <Stat
+                  number={0}
+                  title="Lists"
+                  to={`/${match.params.user}/lists`}
+                />
+              </StatBlock>
+            </Container>
+            <RightBlock>
+              <Button>Follow</Button>
+              <More />
+            </RightBlock>
+          </Container>
+        </Statistic>
+        <Content>
+          <Container>
+            <ProfileDescription user={user} />
+            <Container small>
+              <Feed user={match.params.user} />
+            </Container>
+            <LinksBlock />
+          </Container>
+        </Content>
+      </div>
+    );
+  }
+}
 
 export default Profile;

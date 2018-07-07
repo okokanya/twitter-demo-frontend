@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import magnifier from '../img/magnifier.png';
 
 const SearchInput = styled.input`
-  background: url(${magnifier}) center right 10px no-repeat;
+  background: url('img/magnifier.png') center right 10px no-repeat;
   background-size: auto 50%;
   padding: 10px 30px 10px 10px;
   background-color: #f5f8fa;

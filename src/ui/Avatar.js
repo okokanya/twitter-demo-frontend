@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import avatar from '../img/avatar.png';
 
 const Avatar = styled.div`
-  background-image: url(${avatar});
+  background-image: url(${props => props.src});
   background-color: white;
   background-position: center;
   background-size: contain;
