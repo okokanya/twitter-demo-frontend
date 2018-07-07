@@ -43,10 +43,11 @@ class Feed extends React.Component {
     const url = `https://twitter-demo.erodionov.ru/api/v1/accounts/${
       this.props.user
     }/statuses?access_token=${process.env.REACT_APP_API_KEY}`;
-    fetch
-      .get(url)
+    fetch(url)
+      .then(res => res.json())
       .then(res => {
-        this.handleGetStatuses(res.data);
+        this.handleGetStatuses(res);
+        console.log(res);
       })
       .catch(error => {
         this.handleError(error);
@@ -82,6 +83,7 @@ class Feed extends React.Component {
         </FeedTabs>
         {this.state.statusList.map(tweet => (
           <Tweet
+            key={tweet.id}
             avatar={tweet.account.avatar_static}
             username={tweet.account.username}
             name={tweet.account.display_name}
@@ -99,7 +101,11 @@ class Feed extends React.Component {
             {tweet.media_attachments &&
               tweet.media_attachments.length > 0 &&
               tweet.media_attachments.map(image => (
-                <img src={image.preview_url} alt={image.description} />
+                <img
+                  src={image.preview_url}
+                  alt={image.description}
+                  key={image.preview_url}
+                />
               ))}
             {tweet.embed && (
               <Embed
